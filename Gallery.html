@@ -1,155 +1,2578 @@
-
 <!DOCTYPE html>
-<html lang="en">
+
+
+<html dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#de8e39">
-    <title>Egypt Experience</title>
-    <link rel="shortcut icon" href="logo.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="zoz.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<meta content="Explore the Egypt Experience photo gallery and discover memorable tours, destinations, adventures, and travel moments across Egypt." name="description"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="#fcf7ed" name="theme-color"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="Egypt Experience" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Photo Gallery — Egypt Experience" property="og:title"/>
+<meta content="Explore memorable tours, destinations, adventures, and travel moments across Egypt in the Egypt Experience photo gallery." property="og:description"/>
+<meta content="https://egyptexperiencetravel.com/front%20image%201.webp" property="og:image"/>
+<meta content="Discover Egypt with Egypt Experience" property="og:image:alt"/>
+<meta content="https://egyptexperiencetravel.com/Gallery.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Photo Gallery — Egypt Experience" name="twitter:title"/>
+<meta content="Explore memorable tours, destinations, adventures, and travel moments across Egypt." name="twitter:description"/>
+<meta content="https://egyptexperiencetravel.com/front%20image%201.webp" name="twitter:image"/>
+<meta content="Discover Egypt with Egypt Experience" name="twitter:image:alt"/>
+<title>Photo Gallery — Egypt Experience</title>
+<link href="https://egyptexperiencetravel.com/Gallery.html" rel="canonical"/>
+<link href="logo.webp" rel="icon" type="image/webp"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://unpkg.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500..900&amp;family=Dancing+Script:wght@500..700&amp;family=Plus+Jakarta+Sans:wght@300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script defer="" src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<style> :root {
+  color-scheme: light;
+  --bg: #f7f0e4;
+  --surface: #fffdf8;
+  --surface-warm: #f5ecdf;
+  --bg-soft: #efe4d4;
+  --surface-deep: #e5d5bd;
+  --panel-bg: #fffdf8;
+  --ink: #30291f;
+  --text-color: #30291f;
+  --muted: #71675a;
+  --accent: #b58a4a;
+  --accent-deep: #79582f;
+  --gold: #b58a4a;
+  --gold-soft: #d9c39f;
+  --line: rgba(73,54,32,.14);
+  --site-button: #b08d57;
+  --site-button-hover: #b08d57;
+  --site-button-text: #ffffff;
+  --white-line: rgba(255,255,255,.9);
+  --shadow: 0 18px 44px rgba(45,45,45,.09);
+  --shadow-soft: 0 10px 28px rgba(45,45,45,.07);
+  --ease: cubic-bezier(.22,1,.36,1);
+  --fast: 190ms;
+  --standard: 260ms;
+  --strong: 360ms;
+  --tap-target: 44px;
+  --card-radius: 18px;
+  --whatsapp-green: #25d366;
+  --whatsapp-green-hover: #1fbd5b;
+  --section-gap: clamp(42px,5vw,60px);
+  --header-surface: rgba(247,240,228,.97);
+  --footer-surface: #6b5737;
+  --footer-ink: #fff8eb;
+  --bg-sand: var(--bg);
+  --surface-light: var(--surface);
+  --surface-soft: var(--surface-warm);
+  --button-base: var(--site-button);
+  --button-deep: var(--accent-deep);
+  --accent-dark: var(--accent-deep);
+  --accent-deeper: #6b5737;
+  --brand-gold: var(--gold);
+  --brand-gold-light: var(--gold-soft);
+  --brand-gold-glow: rgba(73,54,32,.09);
+  --text-dark: var(--ink);
+  --text-soft: var(--muted);
+  --card-glass-bg: var(--surface);
+  --card-glass-border: var(--line);
+  --apple-ease: var(--ease);
+  --motion-fast: var(--fast);
+  --motion-standard: var(--standard);
+  --motion-emphasized: var(--strong);
+  --motion-ease: var(--ease);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--bg-sand);
+    color: var(--text-dark);
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+}
+
+body.is-locked { overflow: hidden; }
+
+img { display: block; max-width: 100%; }
+
+a, button { -webkit-tap-highlight-color: transparent; }
+
+a { color: inherit; }
+
+button, a { touch-action: manipulation; }
+
+:focus-visible { outline: 3px solid rgba(168,111,61,.65); outline-offset: 3px; }
+
+
+
+.gallery-container {
+    width: min(1180px,100%);
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 14px;
+    width: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgba(255,249,238,.9);
+    border-radius: 15px;
+    background: var(--surface-light);
+    box-shadow: 0 12px 28px rgba(82,53,29,.13),0 1px 0 rgba(255,255,255,.72) inset;
+    cursor: zoom-in;
+    isolation: isolate;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: transform .35s var(--apple-ease),box-shadow .35s var(--apple-ease),border-color .35s ease;
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg,transparent 52%,rgba(55,33,17,.28) 100%);
+    opacity: .72;
+    transition: opacity .35s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.001);
+    transition: transform .65s var(--apple-ease),filter .65s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(123,84,47,.25);
+    box-shadow: 0 18px 34px rgba(82,53,29,.18),0 1px 0 rgba(255,255,255,.78) inset;
+}
+
+.gallery-item:hover img { transform: scale(1.055); }
+
+.gallery-item:hover::after { opacity: .92; }
+
+.gallery-item:focus-visible {
+    outline: 3px solid rgba(168,111,61,.65);
+    outline-offset: 3px;
+}
+
+.gallery-icon {
+    position: absolute;
+    z-index: 3;
+    right: 12px;
+    bottom: 12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,249,238,.48);
+    border-radius: 50%;
+    background: rgba(48,41,31,.82);
+    color: #f4e5d2;
+    box-shadow: 0 6px 15px rgba(42,25,14,.16),0 1px 0 rgba(255,255,255,.16) inset;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: .92;
+    transform: translateY(2px);
+    transition: transform .35s var(--apple-ease),background-color .35s ease,opacity .35s ease;
+}
+
+.gallery-icon svg { width: 14px; height: 14px; stroke-width: 2.25; }
+
+.gallery-item:hover .gallery-icon { transform: translateY(0); background: #30291f; color: #f4e5d2; }
+
+.gallery-number { display: none; }
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    padding: 0;
+    background: rgba(38,23,13,.92);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: grid;
+    place-items: center;
+    transition: opacity .3s ease,visibility .3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.lightbox.active { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.lightbox-frame { position: relative; width: 100vw; height: 100dvh; max-width: none; max-height: none; display: grid; place-items: center; overflow: hidden; touch-action: none; }
+
+.lightbox-img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(1400px, calc(100vw - 112px));
+    max-height: calc(100dvh - 150px);
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid rgba(255,249,238,.42);
+    border-radius: 12px;
+    box-shadow: 0 28px 70px rgba(0,0,0,.4);
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: zoom-in;
+    transform: translate3d(0,0,0) scale(1);
+    transform-origin: center center;
+    will-change: transform;
+    transition: transform .16s ease-out,opacity .2s ease;
+}
+
+.lightbox-img.is-zoomed { cursor: grab; }
+
+.lightbox-img.is-dragging { cursor: grabbing; transition: none; }
+
+.zoom-controls {
+    position: absolute;
+    z-index: 4;
+    top: max(16px, env(safe-area-inset-top));
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid rgba(242,229,211,.22);
+    border-radius: 999px;
+    background: rgba(42,25,14,.52);
+    box-shadow: 0 8px 24px rgba(0,0,0,.16);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.zoom-control {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    border: 1px solid rgba(242,229,211,.18);
+    border-radius: 50%;
+    background: rgba(244,229,210,.12);
+    color: #fff8ed;
+    cursor: pointer;
+    transition: background-color .18s ease, color .18s ease;
+}
+
+.zoom-control:hover, .zoom-control:focus-visible { background: #f2e5d3; color: #5f422b; }
+
+.zoom-control:disabled { opacity: .38; cursor: not-allowed; }
+
+.zoom-level { min-width: 48px; text-align: center; color: #fff8ed; font: 600 11px/1 "Plus Jakarta Sans",sans-serif; font-variant-numeric: tabular-nums; }
+
+.zoom-control svg { width: 17px; height: 17px; }
+
+.lightbox-close, .lightbox-nav {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(138,100,56,.38);
+    border-radius: 50%;
+    background: var(--bg-sand);
+    color: var(--text-dark);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform .25s var(--apple-ease),background-color .25s ease;
+}
+
+.lightbox-close:hover, .lightbox-nav:hover { transform: translateY(-2px); background: var(--surface-light); border-color: var(--accent-dark); }
+
+.lightbox-close { top: 4px; right: 4px; }
+
+.lightbox-prev { left: 4px; top: 50%; transform: translateY(-50%); }
+
+.lightbox-next { right: 4px; top: 50%; transform: translateY(-50%); }
+
+.lightbox-prev:hover, .lightbox-next:hover { transform: translateY(-50%) scale(1.04); }
+
+.lightbox-info {
+    position: absolute;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 13px;
+    border: 1px solid rgba(255,249,238,.2);
+    border-radius: 999px;
+    background: rgba(42,25,14,.45);
+    color: #fff8ed;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 980px) {
+.gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+
+@media (max-width: 760px) {
+
+
+
+
+
+.gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.gallery-item { border-radius: 13px; }
+.gallery-icon { right: 9px; bottom: 9px; width: 30px; height: 30px; }
+.gallery-icon svg { width: 13px; height: 13px; }
+.lightbox { padding: 14px; }
+.lightbox-frame { height: min(84dvh,700px); }
+.lightbox-close, .lightbox-nav { width: 38px; height: 38px; }
+.lightbox-close { top: 0; right: 0; }
+.lightbox-prev { left: 0; }
+.lightbox-next { right: 0; }
+.lightbox-info { bottom: max(8px, env(safe-area-inset-bottom)); font-size: 9px; }
+}
+
+@media (max-width: 420px) {
+.gallery-container, .gallery-grid, .gallery-item, .gallery-item img { min-width: 0; }
+.gallery-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(5px, 2vw, 8px); }
+.gallery-item { width: 100%; }
+
+
+.gallery-grid { gap: 8px; }
+.gallery-icon { right: 8px; bottom: 8px; width: 28px; height: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+*, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+
+@media (max-width: 760px) {
+.lightbox-frame { width: 100%; height: 100%; }
+.lightbox-img { max-width: calc(100vw - 92px); max-height: calc(100dvh - 112px); }
+.lightbox-close, .lightbox-nav { width: 40px; height: 40px; }
+.lightbox-close { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); }
+.lightbox-prev { left: max(6px, env(safe-area-inset-left)); }
+.lightbox-next { right: max(6px, env(safe-area-inset-right)); }
+.lightbox-info { bottom: max(8px, env(safe-area-inset-bottom)); font-size: 9px; }
+}
+
+@media (max-height: 520px) {
+.lightbox-img { max-height: calc(100dvh - 86px); }
+.lightbox-info { bottom: 4px; padding: 5px 9px; }
+.lightbox-close { top: 4px; }
+}
+
+
+
+
+
+:root {
+    --bg-sand: #f4e5d2;
+    --surface-light: #e6ceb4;
+    --surface-soft: #e6ceb4;
+    --button-base: #d3b694;
+    --button-deep: #c9a783;
+    --accent-dark: #825739;
+    --accent-deeper: #70492f;
+    --brand-gold: #9a7148;
+    --brand-gold-light: #d3b694;
+    --brand-gold-glow: rgba(78,51,29,.09);
+    --text-dark: #795438;
+    --text-soft: #8a725d;
+    --card-glass-bg: #e6ceb4;
+    --card-glass-border: rgba(121,84,56,.14);
+}
+
+html { scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
+
+body { background: #f4e5d2; color: #795438; }
+
+
+
+
+
+
+
+.gallery-item { background: #e6ceb4; border-color: rgba(121,84,56,.15); box-shadow: 0 9px 24px rgba(78,51,29,.09); }
+
+.gallery-item:hover { box-shadow: 0 16px 32px rgba(78,51,29,.15); }
+
+button, input, select, textarea { font-family: "Plus Jakarta Sans", sans-serif; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lightbox { padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); }
+
+.lightbox-frame { width: 100%; height: 100%; }
+
+.lightbox-close, .lightbox-nav {
+  width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+  border: 1px solid rgba(255, 249, 238, .34); border-radius: 50%;
+  background: rgba(246, 227, 197, .94); color: #674323;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, .12);
+}
+
+.lightbox-close:hover, .lightbox-nav:hover { background: #fff3e2; border-color: rgba(255, 249, 238, .54); }
+
+.lightbox-close { top: max(7px, env(safe-area-inset-top)); right: max(7px, env(safe-area-inset-right)); }
+
+.lightbox-info {
+  top: max(7px, env(safe-area-inset-top)); bottom: auto;
+  left: 50%; transform: translateX(-50%);
+  max-width: calc(100% - 132px); overflow: hidden; text-overflow: ellipsis;
+  gap: 0; padding: 8px 13px;
+  border: 1px solid rgba(255, 249, 238, .34); border-radius: 999px;
+  background: rgba(246, 227, 197, .94); color: #674323;
+  font-family: "Plus Jakarta Sans", sans-serif; font-size: 10px; font-weight: 750;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, .12);
+}
+
+.lightbox-info span:last-child { display: none; }
+
+.zoom-controls {
+  top: auto; bottom: max(7px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%);
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  padding: 5px; border: 1px solid rgba(244, 229, 210, .28); border-radius: 999px;
+  background: rgba(48, 41, 31, .94); color: #f4e5d2;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, .16);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+
+.zoom-control {
+  width: 38px; height: 38px; min-width: 38px; min-height: 38px;
+  border: 0; border-radius: 50%; background: transparent; color: #f4e5d2; box-shadow: none;
+}
+
+.zoom-control:hover, .zoom-control:focus-visible { background: rgba(244,229,210,.16); color: #f4e5d2; }
+
+.zoom-control:disabled { opacity: .42; }
+
+.zoom-level { color: #f4e5d2; }
+
+.zoom-control svg { width: 17px; height: 17px; stroke: #f4e5d2; stroke-width: 2.1; }
+
+.zoom-reset-control svg { width: 16px; height: 16px; }
+
+.lightbox-img { max-width: calc(100vw - 112px); max-height: calc(100dvh - 145px); }
+
+@media (max-width: 760px) {
+
+
+
+.lightbox-img { max-width: calc(100vw - 78px); max-height: calc(100dvh - 150px); border-radius: 9px; }
+.lightbox-close, .lightbox-nav { width: 40px; height: 40px; min-width: 40px; min-height: 40px; }
+.lightbox-close { top: max(6px, env(safe-area-inset-top)); right: max(6px, env(safe-area-inset-right)); }
+.lightbox-prev { left: max(2px, env(safe-area-inset-left)); }
+.lightbox-next { right: max(2px, env(safe-area-inset-right)); }
+.lightbox-info { top: max(7px, env(safe-area-inset-top)); max-width: calc(100% - 108px); font-size: 10px; padding: 7px 11px; }
+.zoom-controls { bottom: max(7px, env(safe-area-inset-bottom)); gap: 3px; }
+}
+
+@media (max-width: 380px) {
+.lightbox-info { max-width: calc(100% - 100px); padding: 7px 9px; }
+.zoom-control { width: 36px; height: 36px; min-width: 36px; min-height: 36px; }
+}
+
+.header-plan { display: none !important; }
+
+a, button, .tour-card, .gallery-item, .guide-card, .drawer-nav a, .floating-whatsapp, .back-to-top {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: max(12px, env(safe-area-inset-left));
+  z-index: 10001;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top var(--fast) var(--ease);
+}
+
+.skip-link:focus-visible {
+  top: max(12px, env(safe-area-inset-top));
+}
+
+.header-inner {
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+}
+
+.header-left {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-logo {
+  flex: 0 0 44px;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-name {
+  overflow: hidden;
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 800;
+  line-height: 1.05;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-nav {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav a {
+  position: relative;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--fast) ease;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 0;
+  height: 1px;
+  background: var(--accent-deep);
+  transform: translateX(-50%);
+  transition: width var(--standard) var(--ease);
+}
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: var(--accent-deep);
+}
+
+.site-nav a:hover::after, .site-nav a:focus-visible::after {
+  width: 70%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 252, 245, 0.86);
+  border-radius: 50%;
+  background: rgba(255, 250, 242, 0.68);
+  color: var(--accent-deep);
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(80, 52, 30, 0.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(48, 32, 19, 0.36);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--strong) var(--ease);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 55;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform var(--strong) var(--ease);
+}
+
+.drawer-aside.open {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer-header h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.close-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(138, 90, 41, 0.14);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-nav a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color var(--fast) ease, color var(--fast) ease, transform var(--fast) var(--ease);
+}
+
+.drawer-nav a svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.drawer-nav a.active {
+  
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+
+.drawer-footer {
+  margin-top: 24px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.floating-whatsapp, .back-to-top {
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 70;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.floating-whatsapp {
+  left: max(16px, env(safe-area-inset-left));
+  border: 1px solid rgba(255,255,255,0.34);
+  background: var(--whatsapp-green);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(26, 120, 64, 0.3);
+}
+
+.floating-whatsapp:hover {
+  background: var(--whatsapp-green-hover);
+  transform: translateY(-3px);
+}
+
+.floating-whatsapp i {
+  font-size: 22px;
+}
+
+.back-to-top {
+  right: max(16px, env(safe-area-inset-right));
+  border: 1px solid rgba(255, 249, 238, 0.28);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  box-shadow: 0 8px 22px rgba(48, 29, 14, 0.28);
+  transition: opacity var(--standard) ease, visibility var(--standard) ease, transform var(--standard) var(--ease), background-color var(--fast) ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+.back-to-top svg {
+  width: 19px;
+  height: 19px;
+}
+
+@media (max-width: 1100px) {
+.header-inner {
+    width: min(100% - 36px, 1180px);
+  }
+}
+
+@media (max-width: 1100px) {
+.site-nav {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+.site-nav a {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 760px) {
+.header-inner {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+.brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 760px) {
+.brand-name {
+    max-width: 62vw;
+    font-size: clamp(13px, 4vw, 16px);
+  }
+}
+
+@media (max-width: 760px) {
+.site-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+.icon-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+.header-inner {
+    width: calc(100% - 18px);
+  }
+}
+
+@media (max-width: 380px) {
+.brand-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 380px) {
+.brand-name {
+    max-width: 56vw;
+    font-size: 13px;
+  }
+}
+
+@media (hover: none) {
+.tour-card:hover, .review-card:hover, .gallery-item:hover, .guide-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+.drawer-aside, .drawer-backdrop, .gallery-lightbox, .guide-modal-backdrop, .floating-whatsapp, .back-to-top, .gallery-icon, .gallery-lightbox-close, .gallery-lightbox-control, .gallery-zoom-controls {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+.header-inner {
+  width: min(1240px, calc(100% - 64px));
+  
+  grid-template-columns: auto 1fr auto;
+  gap: 26px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  flex-basis: 46px;
+}
+
+.brand-name {
+  color: #2d2d2d;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+.site-nav {
+  justify-content: flex-end;
+  gap: clamp(15px, 1.9vw, 27px);
+}
+
+.site-nav a {
+  color: #2d2d2d;
+  font-weight: 650;
+}
+
+.header-right {
+  gap: 8px;
+}
+
+.icon-btn {
+  display: none;
+}
+
+.back-to-top {
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 1px solid rgba(104, 72, 43, .42);
+  border-radius: 999px;
+  background: rgba(255, 248, 237, .18);
+  color: #2d2d2d;
+  box-shadow: 0 5px 16px rgba(91, 59, 34, .07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.back-to-top {
+  padding: 0;
+  background: rgba(244, 231, 213, .92);
+  color: #2d2d2d;
+  border-color: rgba(104,72,43,.34);
+}
+
+.back-to-top:hover {
+  background: #ffffff;
+  color: #2d2d2d;
+}
+
+.drawer-aside {
+  width: min(335px, 89vw);
+  padding: max(20px, env(safe-area-inset-top)) 18px max(20px, env(safe-area-inset-bottom));
+  border-left: 1px solid rgba(105,73,43,.16);
+  border-radius: 24px 0 0 24px;
+  background: rgba(249, 241, 229, .985);
+  box-shadow: -22px 0 55px rgba(62,39,20,.18);
+}
+
+.drawer-header {
+  padding: 4px 3px 16px;
+  border-bottom-color: rgba(105,73,43,.13);
+}
+
+.drawer-header h2 {
+  color: #2d2d2d;
+  font-size: 15px;
+}
+
+.close-btn {
+  border-color: rgba(104,72,43,.18);
+  background: #ffffff;
+  color: #2d2d2d;
+}
+
+.drawer-nav {
+  margin-top: 20px;
+  gap: 7px;
+}
+
+.drawer-nav a {
+  min-height: 54px;
+  padding: 12px 13px;
+  
+  border-radius: 13px;
+  color: #2d2d2d;
+  font-size: 11px;
+}
+
+.drawer-nav a:hover, .drawer-nav a.active {
+  
+  
+  color: #2d2d2d;
+}
+
+.drawer-nav a svg {
+  color: #b08d57;
+}
+
+.drawer-footer {
+  color: #68635b;
+}
+
+.site-footer {
+  color: #ffffff;
+}
+
+@media (min-width: 761px) {
+.icon-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+.header-inner, .app-main, .transfer-section, .trips-section, .memory-section, .reviews-section, .gallery-section, .guide-section {
+    width: calc(100% - 42px);
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+.site-nav {
+    gap: 13px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+.site-nav a {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 760px) {
+.header-inner {
+    width: calc(100% - 24px);
+    
+  }
+}
+
+@media (max-width: 760px) {
+.site-nav, .header-plan {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+.icon-btn {
+    display: inline-flex !important;
+    background: rgba(249,241,229,.62);
+    border-color: rgba(105,73,43,.18);
+    color: #2d2d2d;
+    box-shadow: 0 6px 16px rgba(79,51,29,.10);
+  }
+}
+
+@media (max-width: 760px) {
+.drawer-aside {
+    width: min(340px, 92vw);
+  }
+}
+
+.site-footer {
+  overflow: visible;
+}
+
+.back-to-top {
+  border: 1px solid rgba(103,73,44,.46);
+  background: rgba(250,242,230,.26);
+  color: #2d2d2d;
+  box-shadow: 0 6px 17px rgba(82,53,29,.08), inset 0 1px 0 rgba(255,255,255,.42);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.back-to-top:hover {
+  background: rgba(250,242,230,.56);
+  border-color: rgba(103,73,44,.68);
+  color: #2d2d2d;
+}
+
+.site-footer {
+  z-index: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+.tour-card:hover, .gallery-item:hover, .guide-card:hover {
+    transform: none;
+  }
+}
+
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  
+  
+  
+  display: flex;
+  
+  
+}
+
+.gallery-item, .guide-card, .tour-more, .gallery-btn, .memory-btn, .google-review-btn, .icon-btn, .drawer-nav a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tour-card, .review-card, .gallery-item, .guide-card, .hero-cta, .transfer-btn, .memory-btn, .google-review-btn, .gallery-btn, .tour-more, .floating-whatsapp, .back-to-top {
+  transition: border-color 220ms ease, background-color 220ms ease, color 220ms ease,
+              box-shadow 220ms ease, opacity 220ms ease;
+}
+
+.tour-card:hover, .review-card:hover, .gallery-item:hover, .guide-card:hover, .hero-cta:hover, .transfer-btn:hover, .memory-btn:hover, .google-review-btn:hover, .gallery-btn:hover, .tour-more:hover, .floating-whatsapp:hover, .back-to-top:hover {
+  transform: none;
+}
+
+.hero-container, .app-main, .header-inner, .transfer-section, .trips-section, .memory-section, .reviews-section, .gallery-section, .guide-section {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tour-title, .tour-places, .tour-duration, .tour-guests, .review-text, .guide-card-copy {
+  overflow-wrap: anywhere;
+}
+
+.hero-container, .app-main, .header-inner, .transfer-section, .trips-section, .memory-section, .reviews-section, .gallery-section, .guide-section {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tour-title, .tour-places, .tour-duration, .tour-guests, .tour-description, .review-text, .guide-card-copy {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.tour-card, .review-card, .gallery-item, .guide-card, .hero-cta, .transfer-btn, .memory-btn, .google-review-btn, .gallery-btn, .tour-more, .floating-whatsapp, .back-to-top {
+  transition: background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease,opacity .2s ease;
+}
+
+.tour-card:hover, .review-card:hover, .gallery-item:hover, .guide-card:hover, .hero-cta:hover, .transfer-btn:hover, .memory-btn:hover, .google-review-btn:hover, .gallery-btn:hover, .tour-more:hover, .floating-whatsapp:hover, .back-to-top:hover, .tour-card:active, .review-card:active, .gallery-item:active, .guide-card:active, .hero-cta:active, .transfer-btn:active, .memory-btn:active, .google-review-btn:active, .gallery-btn:active, .tour-more:active {
+  transform: none;
+}
+
+@media (max-width:520px) {
+.site-footer {
+    
+    padding-block: 42px 24px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+.hero-cta:hover, .transfer-btn:hover, .memory-btn:hover, .google-review-btn:hover, .gallery-btn:hover, .tour-card:hover, .gallery-item:hover, .guide-card:hover, .review-card:hover, .floating-whatsapp:hover, .back-to-top:hover {
+    transform: none !important;
+    box-shadow: inherit;
+  }
+}
+
+.site-nav a {
+  font-size: 11.5px !important;
+}
+
+@media (max-width: 940px) {
+.header-inner {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 940px) {
+.site-nav {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 940px) {
+.site-nav a {
+    font-size: 10.5px !important;
+  }
+}
+
+@media (min-width: 761px) {
+.site-nav {
+    margin-left: auto !important;
+  }
+}
+
+@media (min-width: 761px) {
+.header-right {
+    margin-left: 0 !important;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+.header-inner {
+    gap: 8px;
+  }
+}
+
+.hero-title, .hero-eyebrow, .hero-description, .section-title, .section-subtitle, .reviews-title, .reviews-subtitle, .gallery-subtitle, .transfer-title, .transfer-description, .transfer-features, .tour-title, .tour-desc, .tour-description, .tour-places, .tour-duration, .tour-guests, .memory-title, .memory-text, .memory-kicker, .review-name, .review-text, .google-copy strong, .google-copy span, .guide-card-copy strong, .guide-card-copy small, .site-nav a, .brand-name, .header-plan, .drawer-header h2, .drawer-nav a, .guide-modal-header h2, .guide-modal-header p, .guide-modal-body, .quote-box, .modal-section {
+  color: var(--ink);
+}
+
+.transfer-card, .tour-card, .tour-body, .review-card, .google-review-panel, .guide-card, .memory-panel, .drawer-aside, .guide-modal-box, .guide-modal-header, .quote-box, input, select, textarea {
+  background: var(--surface) !important;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.drawer-aside {
+  border-color: var(--line);
+  box-shadow: -22px 0 55px rgba(45, 45, 45, 0.14);
+}
+
+.drawer-header {
+  border-bottom-color: var(--line);
+}
+
+.drawer-nav a {
+  color: var(--ink);
+}
+
+.drawer-nav a.active, .drawer-nav a:hover {
+  
+  color: var(--accent-deep);
+}
+
+.header-plan, .back-to-top {
+  min-height: 42px;
+  border: 1px solid rgba(142, 110, 62, 0.28);
+  border-radius: 999px;
+  background: var(--site-button) !important;
+  color: var(--site-button-text) !important;
+  box-shadow: 0 7px 18px rgba(45, 45, 45, 0.12);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.header-plan:hover, .back-to-top:hover {
+  background: var(--site-button-hover) !important;
+  color: #ffffff !important;
+  border-color: rgba(142, 110, 62, 0.48);
+  box-shadow: 0 11px 24px rgba(45, 45, 45, 0.17);
+}
+
+.back-to-top {
+  background: var(--site-button) !important;
+  color: #ffffff !important;
+}
+
+.site-nav {
+  gap: clamp(8px, 1.2vw, 18px);
+}
+
+.site-nav a {
+  min-height: 42px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.site-nav a::after {
+  display: none;
+}
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: var(--accent-deep);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 4px 12px rgba(45, 45, 45, 0.07);
+}
+
+.icon-btn, .close-btn, .guide-modal-close {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--accent-deep);
+  border-color: rgba(176, 141, 87, 0.28);
+  box-shadow: 0 6px 16px rgba(45, 45, 45, 0.08);
+}
+
+.floating-whatsapp {
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+.site-nav {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1100px) {
+.site-nav a {
+    padding-inline: 7px;
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 760px) {
+.memory-feature small, .guide-card-copy small {
+    font-size: 11px !important;
+  }
+}
+
+.drawer-aside {
+  width: min(360px, 91vw);
+  padding: max(22px, env(safe-area-inset-top)) 20px max(22px, env(safe-area-inset-bottom));
+  border-left: 1px solid rgba(112, 78, 43, .18);
+  border-radius: 22px 0 0 22px;
+  background: linear-gradient(160deg, #fbf6ed 0%, #f0e5d5 100%);
+  box-shadow: -18px 0 48px rgba(43, 31, 19, .20);
+}
+
+.drawer-header {
+  padding: 5px 2px 17px;
+  border-bottom: 1px solid rgba(112, 78, 43, .18);
+}
+
+.drawer-header h2 {
+  color: #30291f;
+  letter-spacing: .055em;
+}
+
+.drawer-nav {
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.drawer-nav a {
+  min-height: 52px;
+  padding: 12px 14px;
+  
+  border-radius: 13px;
+  
+  color: #40372b;
+  transition: background-color .22s ease, border-color .22s ease, color .22s ease, transform .22s ease;
+}
+
+.drawer-nav a svg {
+  color: #8e6e3e;
+}
+
+.drawer-nav a.active {
+  
+  
+  color: #624323;
+  
+}
+
+.drawer-nav a:hover {
+  
+  
+  color: #624323;
+}
+
+.drawer-footer {
+  padding-top: 17px;
+  border-top: 1px solid rgba(112, 78, 43, .16);
+  color: #71675a;
+}
+
+.close-btn {
+  border: 1px solid rgba(112, 78, 43, .17);
+  border-radius: 12px;
+  background: #fffdf8;
+  color: #40372b;
+}
+
+@media (max-width: 520px) {
+.drawer-aside {
+    width: min(340px, 92vw);
+    border-radius: 18px 0 0 18px;
+  }
+}
+
+
+
+
+
+.header-inner {
+  min-height: 58px;
+}
+
+.drawer-nav a {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.drawer-nav a:hover, .drawer-nav a:focus-visible {
+  background: rgba(176, 141, 87, 0.09);
+  border-color: rgba(105, 73, 43, 0.18);
+  color: #624323;
+}
+
+.drawer-nav a.active {
+  background: transparent;
+  border-color: transparent;
+  color: #624323;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.drawer-nav a.active:hover, .drawer-nav a.active:focus-visible {
+  background: rgba(176, 141, 87, 0.09);
+  border-color: rgba(105, 73, 43, 0.18);
+}
+
+.drawer-nav a:focus-visible {
+  outline: 3px solid #2d2d2d;
+  outline-offset: 2px;
+}
+
+.site-footer {
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  margin-top: 0;
+  padding: 28px clamp(16px, 4vw, 48px) max(18px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  background: var(--footer-surface);
+  color: var(--footer-ink);
+}
+
+.hero-cta, .transfer-btn, .memory-btn, .google-review-btn, .gallery-btn, .tour-more, .header-plan, .back-to-top {
+  background: #b08d57 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #b08d57 !important;
+}
+
+.hero-cta:hover, .hero-cta:focus-visible, .hero-cta:active, .transfer-btn:hover, .transfer-btn:focus-visible, .transfer-btn:active, .memory-btn:hover, .memory-btn:focus-visible, .memory-btn:active, .google-review-btn:hover, .google-review-btn:focus-visible, .google-review-btn:active, .gallery-btn:hover, .gallery-btn:focus-visible, .gallery-btn:active, .tour-more:hover, .tour-more:focus-visible, .tour-more:active, .header-plan:hover, .header-plan:focus-visible, .header-plan:active, .back-to-top:hover, .back-to-top:focus-visible, .back-to-top:active {
+  background: #b08d57 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #b08d57 !important;
+}
+
+@media (max-width: 760px) {
+.header-inner { min-height: 54px; }
+}
+
+@media (max-width: 760px) {
+.site-footer { padding-block: 24px 18px; }
+}
+
+.hero-cta, .transfer-btn, .memory-btn, .google-review-btn, .gallery-btn, .tour-more, .header-plan, .back-to-top, .hero-cta:hover, .transfer-btn:hover, .memory-btn:hover, .google-review-btn:hover, .gallery-btn:hover, .tour-more:hover, .header-plan:hover, .back-to-top:hover, .hero-cta:focus-visible, .transfer-btn:focus-visible, .memory-btn:focus-visible, .google-review-btn:focus-visible, .gallery-btn:focus-visible, .tour-more:focus-visible, .header-plan:focus-visible, .back-to-top:focus-visible, .hero-cta:active, .transfer-btn:active, .memory-btn:active, .google-review-btn:active, .gallery-btn:active, .tour-more:active, .header-plan:active, .back-to-top:active {
+  color: #ffffff !important;
+}
+
+.site-footer {
+  padding: 17px clamp(12px, 3vw, 32px) max(12px, env(safe-area-inset-bottom));
+}
+
+.drawer-nav a {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.drawer-nav a:hover, .drawer-nav a:focus-visible {
+  background: rgba(142, 110, 62, 0.14);
+  border-color: rgba(142, 110, 62, 0.16);
+  color: #624323;
+}
+
+.drawer-nav a.active {
+  background: rgba(142, 110, 62, 0.09);
+  border-color: transparent;
+  color: #624323;
+  box-shadow: inset 2px 0 0 rgba(142, 110, 62, 0.62);
+}
+
+.drawer-nav a.active:hover, .drawer-nav a.active:focus-visible {
+  background: rgba(142, 110, 62, 0.15);
+  border-color: rgba(142, 110, 62, 0.16);
+}
+
+@media (max-width: 760px) {
+.site-footer {
+    padding-block: 15px max(12px, env(safe-area-inset-bottom));
+  }
+}
+
+
+
+.header-inner {
+  min-height: 49px;
+}
+
+
+
+
+
+
+
+
+
+.drawer-backdrop {
+  z-index: 90;
+}
+
+.drawer-aside {
+  z-index: 91;
+}
+
+.back-to-top, .floating-whatsapp {
+  z-index: 70;
+}
+
+.drawer-nav a.active {
+  background: rgba(142, 110, 62, 0.10);
+  border-color: transparent;
+  color: #624323;
+  box-shadow: none;
+}
+
+.drawer-nav a:hover, .drawer-nav a:focus-visible, .drawer-nav a.active:hover, .drawer-nav a.active:focus-visible {
+  background: rgba(142, 110, 62, 0.16);
+  border-color: rgba(142, 110, 62, 0.12);
+  color: #624323;
+  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+.header-inner {
+    min-height: 49px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.drawer-nav a, .guide-modal-box, .hero-cta, .tour-card, .tour-thumb img {
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.drawer-nav a, .hero-cta, .transfer-btn, .memory-btn, .google-review-btn, .gallery-btn, .tour-more {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Gallery page composition */
+body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif; }
+
+
+
+.gallery-item { background: var(--surface); border-color: var(--white-line); }
+.gallery-item:focus-visible { outline-color: var(--ink); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery-item {
+  background: var(--surface) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 8px 22px rgba(45, 45, 45, .07) !important;
+}
+
+.gallery-item:hover, .gallery-item:focus-visible {
+  box-shadow: 0 13px 30px rgba(45, 45, 45, .11) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: var(--accent-deep) !important;
+}
+
+.zoom-controls {
+  background: var(--bg) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 7px 20px rgba(45, 45, 45, .16) !important;
+}
+
+.zoom-control, .zoom-control svg, .zoom-control svg path, .zoom-control svg line, .zoom-control svg polyline {
+  color: var(--ink) !important;
+  stroke: var(--ink) !important;
+}
+
+.zoom-control:hover, .zoom-control:focus-visible {
+  background: var(--surface-deep) !important;
+  color: var(--ink) !important;
+}
+
+.zoom-level {
+  color: var(--ink) !important;
+}
+
+.gallery-page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(94px, 8vw, 112px) 18px 92px;
+  background: var(--bg);
+}
+
+.gallery-intro {
+  width: min(1180px, 100%);
+  margin: 0 auto clamp(30px, 3.5vw, 42px);
+  text-align: left;
+}
+
+.gallery-kicker {
+  display: none;
+}
+
+.gallery-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(23px, 2.4vw, 31px);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -.018em;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.gallery-title span {
+  color: var(--ink);
+}
+
+
+.gallery-description {
+  width: min(650px, 100%);
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.app-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 45;
+  width: 100%;
+  padding: max(6px, env(safe-area-inset-top)) 0 6px;
+  background: var(--header-surface) !important;
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: 0 5px 18px rgba(45, 45, 45, .055) !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+
+.app-header .header-left, .app-header .brand-name, .app-header .site-nav a, .app-header .icon-btn {
+  color: var(--ink) !important;
+}
+
+.app-header .icon-btn svg {
+  stroke: var(--ink) !important;
+}
+
+@media (max-width: 760px) {
+  .gallery-page {
+    padding: calc(80px + env(safe-area-inset-top)) 12px 72px;
+  }
+
+  .gallery-intro {
+    margin-bottom: 28px;
+  }
+
+  .gallery-description {
+    margin-top: 9px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-title {
+    font-size: clamp(21px, 5.7vw, 25px);
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-page {
+    padding-inline: 9px;
+  }
+}
+
+:root {
+  --gold-soft: #d9c39f;
+  --line: rgba(73, 54, 32, .14);
+  --content-width: 1240px;
+  --page-gutter: clamp(18px, 4vw, 52px);
+  --footer-surface: #6b5737;
+  --footer-ink: #fff8eb;
+}
+
+.footer-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin-top: clamp(42px, 5vw, 58px) !important;
+  padding: clamp(58px, 5.8vw, 68px) 20px 24px !important;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50% 50% 0 0 / 25% 25% 0 0 !important;
+  background: var(--footer-surface);
+  color: var(--footer-ink);
+}
+
+.site-footer::before,
+.site-footer::after {
+  display: none !important;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  display: flex !important;
+  width: min(1040px, 100%);
+  height: auto !important;
+  min-height: 0 !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px;
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+.footer-brand {
+  order: 0 !important;
+  display: flex !important;
+  flex: 0 0 auto;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 11px !important;
+  margin: 0 !important;
+  white-space: nowrap;
+  cursor: default;
+  text-align: center !important;
+}
+
+.footer-brand .footer-logo {
+  display: block !important;
+  flex: 0 0 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer-brand-name {
+  color: var(--footer-ink);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  line-height: 1.2;
+}
+
+.footer-contact {
+  order: 1 !important;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px clamp(18px, 3vw, 34px);
+}
+
+.footer-contact-item {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 4px 0;
+  color: var(--footer-ink);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact-item i {
+  width: 16px;
+  flex: 0 0 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-location {
+  cursor: default;
+}
+
+.footer-social {
+  order: 2 !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-social a {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--footer-ink);
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.footer-social a::before {
+  position: absolute;
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 248, 235, .42);
+  border-radius: 50%;
+  background: rgba(255, 248, 235, .10);
+  content: "";
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  background: rgba(255, 248, 235, .12);
+  color: var(--footer-ink);
+}
+
+.footer-social i {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.footer-bottom {
+  order: 3 !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 248, 235, .72);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.footer-bottom p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 9px;
+  margin: 0;
+}
+
+.footer-legal-link {
+  color: var(--footer-ink);
+  text-decoration: none;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+.footer-legal-link:hover,
+.footer-legal-link:focus-visible {
+  color: var(--gold-soft);
+  text-decoration: none;
+}
+
+.drawer-footer {
+  margin-top: 24px;
+  padding: 17px 0 0;
+  border-top: 1px solid rgba(112, 78, 43, .16);
+  color: #71675a;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    margin-top: 42px !important;
+    padding: 50px 16px max(20px, env(safe-area-inset-bottom)) !important;
+    border-radius: 50% 50% 0 0 / 27% 27% 0 0 !important;
+  }
+
+  .footer-inner {
+    gap: 13px !important;
+  }
+
+  .footer-brand {
+    order: 0 !important;
+    justify-content: center !important;
+  }
+
+  .footer-contact {
+    order: 1 !important;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-contact-item {
+    min-height: 29px;
+    flex-direction: row !important;
+    font-size: 10.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-social {
+    order: 2 !important;
+    gap: 7px;
+  }
+
+  .footer-bottom {
+    order: 3 !important;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-legal-link {
+    transition: none;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://egyptexperiencetravel.com/#organization",
+      "name": "Egypt Experience",
+      "url": "https://egyptexperiencetravel.com/",
+      "logo": "https://egyptexperiencetravel.com/logo.webp",
+      "email": "zz7463077@gmail.com",
+      "telephone": "+201107874499",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hurghada",
+        "addressCountry": "Egypt"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1FWZJ5X1Gh/",
+        "https://www.instagram.com/egyptexperienceofficial?igsh=MXY0bWU3azJvdzhnZA==",
+        "https://www.tiktok.com/@zoztavelegypt1?_t=ZS-8xWNUdJKrAN&_r=1",
+        "https://t.me/EgyptExperience",
+        "https://vk.ru/id1078291245"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://egyptexperiencetravel.com/#website",
+      "url": "https://egyptexperiencetravel.com/",
+      "name": "Egypt Experience",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://egyptexperiencetravel.com/#organization" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://egyptexperiencetravel.com/Gallery.html#webpage",
+      "url": "https://egyptexperiencetravel.com/Gallery.html",
+      "name": "Photo Gallery — Egypt Experience",
+      "description": "Explore memorable tours, destinations, adventures, and travel moments across Egypt in the Egypt Experience photo gallery.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://egyptexperiencetravel.com/#website" },
+      "about": { "@id": "https://egyptexperiencetravel.com/#organization" },
+      "primaryImageOfPage": "https://egyptexperiencetravel.com/front%20image%201.webp",
+      "mainEntity": {
+        "@type": "ImageGallery",
+        "name": "Egypt Experience travel gallery",
+        "numberOfItems": 27
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://egyptexperiencetravel.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://egyptexperiencetravel.com/Gallery.html" }
+      ]
+    }
+  ]
+}
+</script>
 </head>
-<body>
-
-    <header class="main-header">
-    <div class="header-container">
-        <div class="header-logo">
-            <img src="logo.webp" alt="Logo" class="header-logo__img">
-            <div class="header-logo__content">
-                <span class="header-logo__name">EGYPT</span>
-                <span class="header-logo__tag">Experience</span>
-            </div>
-        </div>
-<nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="index.html#home" class="main-nav__link">Home</a></li>
-                <li class="main-nav__item"><a href="index.html#about" class="main-nav__link">About</a></li>
-                <li class="main-nav__item"><a href="index.html#tours" class="main-nav__link">Trips</a></li>
-                <li class="main-nav__item"><a href="Gallery.html" class="main-nav__link">Gallery</a></li>
-                <li class="main-nav__item"><a href="index.html#testimonials" class="main-nav__link">Reviews</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="https://wa.me/201107874499" class="btn-book desktop-whatsapp">WhatsApp</a>
-            <i class="fas fa-bars header-icon--menu" id="hamburgerIcon"></i>
-        </div>
-    </div>
+<body id="top"><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="app-header">
+<div class="header-inner">
+<a aria-label="Egypt Experience home" class="header-left" href="index.html">
+<img alt="Egypt Experience Logo" class="brand-logo" height="44" src="logo.webp" width="44"/>
+<span class="brand-name">EGYPT EXPERIENCE</span>
+</a>
+<nav aria-label="Main navigation" class="site-nav">
+<a href="index.html#trips">
+       TOURS
+      </a>
+<a href="index.html#transfer">
+       TRANSFERS
+      </a>
+<a href="index.html#about">
+       MEMORY BOOK
+      </a>
+<a href="index.html#reviews">
+       REVIEWS
+      </a>
+<a aria-current="page" href="Gallery.html#gallery-section">
+       GALLERY
+      </a>
+<a href="index.html#guide">
+       TRAVEL GUIDE
+      </a>
+</nav>
+<div class="header-right">
+<button aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open Navigation Menu" class="icon-btn" id="open-drawer-btn" type="button">
+<i data-lucide="menu">
+</i>
+</button>
+</div>
+</div>
 </header>
-
-<div class="modal-overlay" id="navOverlay">
-    <div class="modal-content">
-        <i class="fas fa-times modal-close" id="closeMenu"></i>
-        <nav class="mobile-nav">
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a href="index.html#home" class="mobile-nav__link">Home</a></li>
-                <li class="mobile-nav__item"><a href="index.html#about" class="mobile-nav__link">About</a></li>
-                <li class="mobile-nav__item"><a href="index.html#tours" class="mobile-nav__link">Trips</a></li>
-                <li class="mobile-nav__item"><a href="Gallery.html" class="mobile-nav__link">Gallery</a></li>
-                <li class="mobile-nav__item"><a href="index.html#testimonials" class="mobile-nav__link">Reviews</a></li>
-            </ul>
-        </nav>
-        <div class="nav-divider"></div>
-        <a href="https://wa.me/201107874499" class="btn-book btn-modal-whatsapp">WhatsApp</a>
-    </div>
+<div aria-hidden="true" class="drawer-backdrop" id="drawer-backdrop" inert=""></div>
+<aside aria-hidden="true" aria-label="Mobile Navigation" class="drawer-aside" id="mobile-drawer" inert="" role="dialog" tabindex="-1">
+<div class="drawer-header">
+<h2>
+     EGYPT EXPERIENCE
+    </h2>
+<button aria-label="Close Navigation Menu" class="close-btn" id="close-drawer-btn" type="button">
+<i data-lucide="x">
+</i>
+</button>
 </div>
-<section class="gallery-page">
-    <div class="gallery-container">
-        <h1 class="gallery-title">Photo <span class="highlight">Gallery</span></h1>
-        <p class="gallery-subtitle">Explore the beauty of our tours and destinations.</p>
-        
-        <div class="gallery-grid" id="galleryGrid">
-            <div class="gallery-item"><img src="client 1 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 2 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 3 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 4 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 5 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 6 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 7 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 8 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 9 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 10 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 11 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 12 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 13 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 14 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 15 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 16 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 17 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 18 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 19 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 20 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 21 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 22 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 23 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 24 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 25 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 26 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 27 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 28 .webp" alt="Gallery" loading="lazy"></div>
-            <div class="gallery-item"><img src="client 29 .webp" alt="Gallery" loading="lazy"></div>
-        </div>
-    </div>
+<nav class="drawer-nav">
+<a href="index.html#trips">
+<i data-lucide="compass">
+</i>
+<span>
+      Excursions
+     </span>
+</a>
+<a href="index.html#transfer">
+<i data-lucide="car">
+</i>
+<span>
+      Transfers
+     </span>
+</a>
+<a href="index.html#about">
+<i data-lucide="book-open">
+</i>
+<span>
+      Our Story
+     </span>
+</a>
+<a href="index.html#reviews">
+<i data-lucide="star">
+</i>
+<span>
+      Reviews
+     </span>
+</a>
+<a aria-current="page" class="active" href="Gallery.html#gallery-section">
+<i data-lucide="image">
+</i>
+<span>
+      Gallery
+     </span>
+</a>
+<a href="index.html#guide">
+<i data-lucide="info">
+</i>
+<span>
+      Trip Guide
+     </span>
+</a>
+</nav>
+<div class="drawer-footer">
+<p>
+     © 2026 Egypt Experience.
+    </p> <p>
+     Crafting Unforgettable Journeys.
+    </p>
+</div>
+</aside>
+<main id="main-content" tabindex="-1">
+<section aria-labelledby="gallery-title" class="gallery-page" id="gallery-section">
+<div class="gallery-container">
+<div class="gallery-intro">
+<h1 class="gallery-title" id="gallery-title">Our <span>Gallery</span></h1>
+<p class="gallery-description">Step into the moments that define Egypt Experience. Explore a curated collection of destinations, adventures, and unforgettable memories captured across Egypt.</p>
+</div>
+<div aria-label="Egypt Experience photo gallery" class="gallery-grid" id="gallery-grid">
+<button aria-label="Open gallery image 1" class="gallery-item" data-index="0" type="button"><img alt="Egypt Experience gallery moment 1" decoding="async" fetchpriority="high" height="800" loading="eager" src="client 1.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 2" class="gallery-item" data-index="1" type="button"><img alt="Egypt Experience gallery moment 2" decoding="async" height="900" loading="lazy" src="client 2.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 3" class="gallery-item" data-index="2" type="button"><img alt="Egypt Experience gallery moment 3" decoding="async" height="900" loading="lazy" src="client 3.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 4" class="gallery-item" data-index="3" type="button"><img alt="Egypt Experience gallery moment 4" decoding="async" height="750" loading="lazy" src="client 4.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 5" class="gallery-item" data-index="4" type="button"><img alt="Egypt Experience gallery moment 5" decoding="async" height="750" loading="lazy" src="client 5.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 6" class="gallery-item" data-index="5" type="button"><img alt="Egypt Experience gallery moment 6" decoding="async" height="750" loading="lazy" src="client 6.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 7" class="gallery-item" data-index="6" type="button"><img alt="Egypt Experience gallery moment 7" decoding="async" height="900" loading="lazy" src="client 7.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 8" class="gallery-item" data-index="7" type="button"><img alt="Egypt Experience gallery moment 8" decoding="async" height="900" loading="lazy" src="client 8.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 9" class="gallery-item" data-index="8" type="button"><img alt="Egypt Experience gallery moment 9" decoding="async" height="750" loading="lazy" src="client 9.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 10" class="gallery-item" data-index="9" type="button"><img alt="Egypt Experience gallery moment 10" decoding="async" height="750" loading="lazy" src="client 10.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 11" class="gallery-item" data-index="10" type="button"><img alt="Egypt Experience gallery moment 11" decoding="async" height="750" loading="lazy" src="client 11.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 12" class="gallery-item" data-index="11" type="button"><img alt="Egypt Experience gallery moment 12" decoding="async" height="800" loading="lazy" src="client 12.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 13" class="gallery-item" data-index="12" type="button"><img alt="Egypt Experience gallery moment 13" decoding="async" height="750" loading="lazy" src="client 13.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 14" class="gallery-item" data-index="13" type="button"><img alt="Egypt Experience gallery moment 14" decoding="async" height="750" loading="lazy" src="client 14.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 15" class="gallery-item" data-index="14" type="button"><img alt="Egypt Experience gallery moment 15" decoding="async" height="750" loading="lazy" src="client 15.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 16" class="gallery-item" data-index="15" type="button"><img alt="Egypt Experience gallery moment 16" decoding="async" height="900" loading="lazy" src="client 16.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 17" class="gallery-item" data-index="16" type="button"><img alt="Egypt Experience gallery moment 17" decoding="async" height="900" loading="lazy" src="client 17.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 18" class="gallery-item" data-index="17" type="button"><img alt="Egypt Experience gallery moment 18" decoding="async" height="750" loading="lazy" src="client 18.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 19" class="gallery-item" data-index="18" type="button"><img alt="Egypt Experience gallery moment 19" decoding="async" height="750" loading="lazy" src="client 19.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 20" class="gallery-item" data-index="19" type="button"><img alt="Egypt Experience gallery moment 20" decoding="async" height="750" loading="lazy" src="client 20.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 21" class="gallery-item" data-index="20" type="button"><img alt="Egypt Experience gallery moment 21" decoding="async" height="750" loading="lazy" src="client 21.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 22" class="gallery-item" data-index="21" type="button"><img alt="Egypt Experience gallery moment 22" decoding="async" height="750" loading="lazy" src="client 22.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 23" class="gallery-item" data-index="22" type="button"><img alt="Egypt Experience gallery moment 23" decoding="async" height="800" loading="lazy" src="client 23.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 24" class="gallery-item" data-index="23" type="button"><img alt="Egypt Experience gallery moment 24" decoding="async" height="750" loading="lazy" src="client 24.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 25" class="gallery-item" data-index="24" type="button"><img alt="Egypt Experience gallery moment 25" decoding="async" height="900" loading="lazy" src="client 25.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 26" class="gallery-item" data-index="25" type="button"><img alt="Egypt Experience gallery moment 26" decoding="async" height="900" loading="lazy" src="client 26.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 27" class="gallery-item" data-index="26" type="button"><img alt="Egypt Experience gallery moment 27" decoding="async" height="750" loading="lazy" src="client 27.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+</div>
+</div>
 </section>
-
-<div class="lightbox" id="lightbox">
-    <span class="close-lightbox">&times;</span>
-    <img src="" alt="Zoomed" class="lightbox-img">
-</div>
-
-    <footer id="contact" class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-brand">
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-phone-alt"></i> +20 11 07874499</li>
-                        <li><i class="fas fa-envelope"></i> zz7463077@gmail.com </li>
-                        <li><i class="fas fa-map-marker-alt"></i> Hurghada, Egypt</li>
-                    </ul>
-                </div>
-<div class="footer-col">
-    <h4>Follow Us</h4>
-    <div class="social-links">
-        <a href="https://www.facebook.com/share/1FWZJ5X1Gh/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/egyptexperienceofficial?igsh=MXY0bWU3azJvdzhnZA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@zoztavelegypt1?_t=ZS-8xWNUdJKrAN&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/201107874499" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/EgyptExperience" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://vk.ru/id1078291245" target="_blank"><i class="fab fa-vk"></i></a>
+</main><footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img alt="Egypt Experience Logo" class="footer-logo" height="40" src="logo.webp" width="40" />
+      <span class="footer-brand-name">EGYPT EXPERIENCE</span>
     </div>
-</div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Egypt Experience. All Rights Reserved.</p>
-                <div class="legal-links">
-                    <a href="Privacy.html">Privacy Policy</a>
-                    <a href="Terms.html">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-        <button id="scrollToTop" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
+    <div class="footer-contact">
+      <a aria-label="Call Egypt Experience" class="footer-contact-item" href="tel:+201107874499">
+        <i class="fa-solid fa-phone"></i>
+        <span>+20 11 07874499</span>
+      </a>
+      <a class="footer-contact-item" href="mailto:zz7463077@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+        <span>zz7463077@gmail.com</span>
+      </a>
+      <span class="footer-contact-item footer-location">
+        <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+        <span>Hurghada, Egypt</span>
+      </span>
+    </div>
+
+    <div aria-label="Social media links" class="footer-social">
+      <a aria-label="Facebook" href="https://www.facebook.com/share/1FWZJ5X1Gh/" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a aria-label="Instagram" href="https://www.instagram.com/egyptexperienceofficial?igsh=MXY0bWU3azJvdzhnZA==" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-instagram"></i>
+      </a>
+      <a aria-label="TikTok" href="https://www.tiktok.com/@zoztavelegypt1?_t=ZS-8xWNUdJKrAN&amp;_r=1" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-tiktok"></i>
+      </a>
+      <a aria-label="WhatsApp" href="https://wa.me/201107874499?text=Hello%20Egypt%20Experience" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a aria-label="Telegram" href="https://t.me/EgyptExperience" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-telegram"></i>
+      </a>
+      <a aria-label="VK social network" href="https://vk.ru/id1078291245" rel="noopener noreferrer" target="_blank">
+        <i aria-hidden="true" class="fa-brands fa-vk"></i>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Egypt Experience. All rights reserved. <a class="footer-legal-link" href="Policies.html">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+<a aria-label="Contact Egypt Experience on WhatsApp" class="floating-whatsapp" href="https://wa.me/201107874499?text=Hello%20Egypt%20Experience" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i aria-hidden="true" class="fa-brands fa-whatsapp"></i></a>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top" title="Back to top" type="button"><i aria-hidden="true" data-lucide="arrow-up"></i></button>
+<div aria-hidden="true" aria-labelledby="lightbox-label" aria-modal="true" class="lightbox" id="lightbox" inert="" role="dialog">
+<div class="lightbox-frame">
+<button aria-label="Close image viewer" class="lightbox-close" id="lightbox-close" type="button"><i aria-hidden="true" data-lucide="x"></i></button>
+<div aria-label="Image zoom controls" class="zoom-controls" role="group">
+<button aria-label="Zoom out" class="zoom-control" id="zoom-out" title="Zoom out" type="button"><i aria-hidden="true" data-lucide="minus"></i></button>
+<button aria-label="Reset zoom" class="zoom-control zoom-reset-control" id="zoom-reset" title="Fit image to screen" type="button"><i aria-hidden="true" data-lucide="move-diagonal-2"></i></button>
+<button aria-label="Zoom in" class="zoom-control" id="zoom-in" title="Zoom in" type="button"><i aria-hidden="true" data-lucide="plus"></i></button>
+</div>
+<button aria-label="Previous image" class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button"><i aria-hidden="true" data-lucide="chevron-left"></i></button>
+<img alt="" class="lightbox-img" decoding="async" draggable="false" id="lightbox-img" src=""/>
+<button aria-label="Next image" class="lightbox-nav lightbox-next" id="lightbox-next" type="button"><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<div class="lightbox-info" id="lightbox-label"><span id="lightbox-counter">1 / 27</span><span>Use ← → to browse</span></div>
+</div>
+</div>
+<script>
+'use strict';
+(() => {
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    const drawer = $('#mobile-drawer');
+    const drawerBackdrop = $('#drawer-backdrop');
+    const menuButton = $('#open-drawer-btn');
+    const closeDrawerButton = $('#close-drawer-btn');
+    const lightbox = $('#lightbox');
+    const lightboxImage = $('#lightbox-img');
+    const lightboxClose = $('#lightbox-close');
+    const lightboxPrev = $('#lightbox-prev');
+    const lightboxNext = $('#lightbox-next');
+    const lightboxCounter = $('#lightbox-counter');
+    const zoomInButton = $('#zoom-in');
+    const zoomOutButton = $('#zoom-out');
+    const zoomResetButton = $('#zoom-reset');
+    const backToTop = $('#back-to-top');
+    const galleryItems = $$('.gallery-item');
+    const images = galleryItems.map(item => $('img', item)).filter(Boolean);
+    let galleryIndex = 0;
+    let zoomLevel = 1;
+    let panX = 0;
+    let panY = 0;
+    let dragPointer = null;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragOriginX = 0;
+    let dragOriginY = 0;
+    const activePointers = new Map();
+    let pinchStartDistance = 0;
+    let pinchStartZoom = 1;
+    let lastFocusedElement = null;
+    let activeOverlay = null;
+    let backgroundState = [];
+
+    const focusables = root => $$('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])', root).filter(el => !el.closest('[inert]') && el.getClientRects().length > 0);
+    const setInert = (element, value) => {
+        if (!element) return;
+        if (value) element.setAttribute('inert', '');
+        else element.removeAttribute('inert');
+    };
+    const lockBackground = overlay => {
+        if (backgroundState.length) return;
+        backgroundState = [...document.body.children]
+            .filter(element => element !== overlay && element !== drawerBackdrop)
+            .map(element => ({ element, inert: element.hasAttribute('inert'), ariaHidden: element.getAttribute('aria-hidden') }));
+        backgroundState.forEach(({ element }) => {
+            setInert(element, true);
+            if (element.hasAttribute('aria-hidden')) element.setAttribute('aria-hidden', 'true');
         });
-    </script>
-    <script src="zoz.js"></script>
+    };
+    const unlockBackground = () => {
+        backgroundState.forEach(({ element, inert, ariaHidden }) => {
+            setInert(element, inert);
+            if (ariaHidden === null) element.removeAttribute('aria-hidden');
+            else element.setAttribute('aria-hidden', ariaHidden);
+        });
+        backgroundState = [];
+    };
+    const openDrawer = () => {
+        if (activeOverlay === drawer) return;
+        const returnTarget = activeOverlay === lightbox ? lastFocusedElement : document.activeElement;
+        if (activeOverlay === lightbox) closeLightbox({ restoreFocus: false });
+        lastFocusedElement = returnTarget;
+        lockBackground(drawer);
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        drawer.setAttribute('aria-modal', 'true');
+        menuButton.setAttribute('aria-expanded', 'true');
+        setInert(drawer, false);
+        drawerBackdrop.classList.add('active');
+        drawerBackdrop.inert = false;
+        drawerBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.classList.add('is-locked');
+        activeOverlay = drawer;
+        closeDrawerButton.focus();
+    };
+    const closeDrawer = ({ restoreFocus = true } = {}) => {
+        if (activeOverlay !== drawer) return;
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        drawer.setAttribute('aria-modal', 'false');
+        menuButton.setAttribute('aria-expanded', 'false');
+        setInert(drawer, true);
+        drawerBackdrop.classList.remove('active');
+        drawerBackdrop.inert = true;
+        drawerBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('is-locked');
+        activeOverlay = null;
+        unlockBackground();
+        if (restoreFocus && lastFocusedElement instanceof HTMLElement) {
+            const target = lastFocusedElement.closest('[inert]') ? menuButton : lastFocusedElement;
+            if (target?.isConnected) target.focus();
+        }
+    };
+    const trapFocus = event => {
+        if (!activeOverlay || event.key !== 'Tab') return;
+        const items = focusables(activeOverlay);
+        if (!items.length) {
+            event.preventDefault();
+            activeOverlay.focus();
+            return;
+        }
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !activeOverlay.contains(document.activeElement))) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !activeOverlay.contains(document.activeElement))) {
+            event.preventDefault();
+            first.focus();
+        }
+    };
+    const preloadImage = index => {
+        if (index < 0 || index >= images.length) return;
+        const source = images[index].currentSrc || images[index].src;
+        if (!source) return;
+        const preload = new Image();
+        preload.decoding = 'async';
+        preload.fetchPriority = 'low';
+        preload.src = source;
+    };
+    // Preload only the next image in the browsing direction to avoid fetching both neighbors unnecessarily.
+    const preloadNextImage = (index, direction = 1) => {
+        if (!images.length) return;
+        preloadImage((index + direction + images.length) % images.length);
+    };
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+    const renderZoom = () => {
+        const maxPanX = Math.max(0, lightboxImage.offsetWidth * (zoomLevel - 1) / 2);
+        const maxPanY = Math.max(0, lightboxImage.offsetHeight * (zoomLevel - 1) / 2);
+        panX = clamp(panX, -maxPanX, maxPanX);
+        panY = clamp(panY, -maxPanY, maxPanY);
+        lightboxImage.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${zoomLevel})`;
+        lightboxImage.classList.toggle('is-zoomed', zoomLevel > 1.001);
+        zoomOutButton.disabled = zoomLevel <= 1.001;
+        zoomInButton.disabled = zoomLevel >= 4;
+        zoomResetButton.disabled = zoomLevel <= 1.001;
+    };
+    const setZoom = (nextLevel, anchorX = 0, anchorY = 0) => {
+        const previous = zoomLevel;
+        zoomLevel = clamp(nextLevel, 1, 4);
+        if (zoomLevel === 1) {
+            panX = 0;
+            panY = 0;
+        } else if (previous !== zoomLevel) {
+            const ratio = zoomLevel / previous;
+            panX = (panX - anchorX) * ratio + anchorX;
+            panY = (panY - anchorY) * ratio + anchorY;
+        }
+        renderZoom();
+    };
+    const resetZoom = () => {
+        zoomLevel = 1;
+        panX = 0;
+        panY = 0;
+        dragPointer = null;
+        lightboxImage.classList.remove('is-dragging');
+        renderZoom();
+    };
+    const zoomAtCenter = amount => setZoom(zoomLevel + amount);
+    const setLightboxImage = (index, preloadDirection = 1) => {
+        const image = images[index];
+        if (!image) return;
+        resetZoom();
+        lightboxImage.style.opacity = '0';
+        lightboxImage.alt = image.alt || `Egypt Experience gallery image ${index + 1}`;
+        lightboxImage.onload = () => {
+            if (lightbox.classList.contains('active')) lightboxImage.style.opacity = '1';
+        };
+        lightboxImage.onerror = () => {
+            lightboxImage.style.opacity = '1';
+        };
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxCounter.textContent = `${index + 1} / ${images.length}`;
+        preloadNextImage(index, preloadDirection);
+    };
+    const openLightbox = index => {
+        if (!images[index]) return;
+        const returnTarget = activeOverlay === drawer ? menuButton : document.activeElement;
+        if (activeOverlay === drawer) closeDrawer({ restoreFocus: false });
+        lastFocusedElement = returnTarget;
+        galleryIndex = index;
+        lockBackground(lightbox);
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightbox.setAttribute('aria-modal', 'true');
+        setInert(lightbox, false);
+        document.body.classList.add('is-locked');
+        activeOverlay = lightbox;
+        setLightboxImage(index);
+        lightboxClose.focus();
+    };
+    const closeLightbox = ({ restoreFocus = true } = {}) => {
+        if (activeOverlay !== lightbox) return;
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.setAttribute('aria-modal', 'false');
+        setInert(lightbox, true);
+        lightboxImage.removeAttribute('src');
+        resetZoom();
+        document.body.classList.remove('is-locked');
+        activeOverlay = null;
+        unlockBackground();
+        if (restoreFocus && lastFocusedElement instanceof HTMLElement) {
+            const target = lastFocusedElement.closest('[inert]') ? galleryItems[galleryIndex] : lastFocusedElement;
+            if (target?.isConnected) target.focus();
+        }
+    };
+    const showImage = direction => {
+        if (!images.length) return;
+        galleryIndex = (galleryIndex + direction + images.length) % images.length;
+        setLightboxImage(galleryIndex, direction);
+    };
+
+    menuButton.addEventListener('click', openDrawer);
+    closeDrawerButton.addEventListener('click', () => closeDrawer());
+    drawerBackdrop.addEventListener('click', () => closeDrawer());
+    $$('.drawer-nav a').forEach(link => link.addEventListener('click', () => closeDrawer({ restoreFocus: false })));
+    galleryItems.forEach(item => item.addEventListener('click', () => {
+        const index = Number(item.dataset.index);
+        if (Number.isInteger(index)) openLightbox(index);
+    }));
+    zoomInButton.addEventListener('click', () => zoomAtCenter(.5));
+    zoomOutButton.addEventListener('click', () => zoomAtCenter(-.5));
+    zoomResetButton.addEventListener('click', resetZoom);
+    lightboxImage.addEventListener('dblclick', event => {
+        event.preventDefault();
+        setZoom(zoomLevel > 1 ? 1 : 2, event.clientX - window.innerWidth / 2, event.clientY - window.innerHeight / 2);
+    });
+    lightbox.addEventListener('wheel', event => {
+        if (activeOverlay !== lightbox || !(event.ctrlKey || event.metaKey || zoomLevel > 1)) return;
+        event.preventDefault();
+        setZoom(zoomLevel + (event.deltaY < 0 ? .2 : -.2), event.clientX - window.innerWidth / 2, event.clientY - window.innerHeight / 2);
+    }, { passive: false });
+    lightboxImage.addEventListener('pointerdown', event => {
+        if (event.pointerType === 'touch') {
+            activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+            if (activePointers.size === 2) {
+                const points = [...activePointers.values()];
+                pinchStartDistance = Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y);
+                pinchStartZoom = zoomLevel;
+                dragPointer = null;
+                lightboxImage.classList.remove('is-dragging');
+                return;
+            }
+        }
+        if (zoomLevel <= 1.001 || event.button !== 0 || activePointers.size > 1) return;
+        dragPointer = event.pointerId;
+        dragStartX = event.clientX;
+        dragStartY = event.clientY;
+        dragOriginX = panX;
+        dragOriginY = panY;
+        lightboxImage.classList.add('is-dragging');
+        lightboxImage.setPointerCapture?.(event.pointerId);
+    });
+    lightboxImage.addEventListener('pointermove', event => {
+        if (activePointers.has(event.pointerId)) {
+            activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+            if (activePointers.size >= 2) {
+                const points = [...activePointers.values()];
+                const distance = Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y);
+                if (pinchStartDistance > 0) setZoom(pinchStartZoom * distance / pinchStartDistance);
+                return;
+            }
+        }
+        if (dragPointer !== event.pointerId) return;
+        panX = dragOriginX + event.clientX - dragStartX;
+        panY = dragOriginY + event.clientY - dragStartY;
+        renderZoom();
+    });
+    const endImageDrag = event => {
+        activePointers.delete(event.pointerId);
+        if (dragPointer === event.pointerId) dragPointer = null;
+        if (activePointers.size < 2) pinchStartDistance = 0;
+        lightboxImage.classList.remove('is-dragging');
+    };
+    lightboxImage.addEventListener('pointerup', endImageDrag);
+    lightboxImage.addEventListener('pointercancel', endImageDrag);
+    lightboxClose.addEventListener('click', () => closeLightbox());
+    lightboxPrev.addEventListener('click', () => showImage(-1));
+    lightboxNext.addEventListener('click', () => showImage(1));
+    lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            if (activeOverlay === lightbox) closeLightbox();
+            else if (activeOverlay === drawer) closeDrawer();
+            return;
+        }
+        if (activeOverlay === lightbox && (event.key === '+' || event.key === '=')) {
+            event.preventDefault();
+            zoomAtCenter(.5);
+            return;
+        }
+        if (activeOverlay === lightbox && event.key === '-') {
+            event.preventDefault();
+            zoomAtCenter(-.5);
+            return;
+        }
+        if (activeOverlay === lightbox && event.key === '0') {
+            event.preventDefault();
+            resetZoom();
+            return;
+        }
+        if (activeOverlay === lightbox && event.key === 'ArrowLeft') {
+            event.preventDefault();
+            showImage(-1);
+            return;
+        }
+        if (activeOverlay === lightbox && event.key === 'ArrowRight') {
+            event.preventDefault();
+            showImage(1);
+            return;
+        }
+        trapFocus(event);
+    });
+    const updateBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 480);
+    backToTop.addEventListener('click', () => window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    }));
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    setInert(drawer, true);
+    drawerBackdrop.inert = true;
+    drawerBackdrop.setAttribute('aria-hidden', 'true');
+    setInert(lightbox, true);
+    renderZoom();
+    drawer.setAttribute('aria-modal', 'false');
+    updateBackToTop();
+    const initIcons = () => {
+        if (window.lucide?.createIcons) window.lucide.createIcons();
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initIcons, { once: true });
+    else initIcons();
+})();
+</script>
 </body>
 </html>
-
