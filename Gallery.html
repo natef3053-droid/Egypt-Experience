@@ -236,9 +236,11 @@ button, a { touch-action: manipulation; }
 
 .lightbox.active { opacity: 1; visibility: visible; pointer-events: auto; }
 
-.lightbox-frame { position: relative; width: 100vw; height: 100dvh; max-width: none; max-height: none; display: grid; place-items: center; overflow: hidden; touch-action: none; }
+.lightbox-frame { position: relative; isolation: isolate; width: 100vw; height: 100dvh; max-width: none; max-height: none; display: grid; place-items: center; overflow: hidden; touch-action: none; }
 
 .lightbox-img {
+    position: relative;
+    z-index: 1;
     display: block;
     width: auto;
     height: auto;
@@ -255,7 +257,7 @@ button, a { touch-action: manipulation; }
     transform: translate3d(0,0,0) scale(1);
     transform-origin: center center;
     will-change: transform;
-    transition: transform .16s ease-out,opacity .2s ease;
+    transition: transform .24s cubic-bezier(.22,.61,.36,1),opacity .2s ease;
 }
 
 .lightbox-img.is-zoomed { cursor: grab; }
@@ -265,7 +267,7 @@ button, a { touch-action: manipulation; }
 
 .zoom-controls {
     position: absolute;
-    z-index: 4;
+    z-index: 30;
     top: max(16px, env(safe-area-inset-top));
     left: 50%;
     transform: translateX(-50%);
@@ -273,10 +275,10 @@ button, a { touch-action: manipulation; }
     align-items: center;
     gap: 6px;
     padding: 5px;
-    border: 1px solid rgba(242,229,211,.22);
+    border: 1px solid rgba(138,100,56,.28);
     border-radius: 999px;
-    background: rgba(42,25,14,.52);
-    box-shadow: 0 8px 24px rgba(0,0,0,.16);
+    background: var(--bg-sand);
+    box-shadow: 0 7px 18px rgba(0,0,0,.12);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 }
@@ -287,24 +289,25 @@ button, a { touch-action: manipulation; }
     width: 42px;
     height: 42px;
     flex: 0 0 auto;
-    border: 1px solid rgba(242,229,211,.18);
+    border: 1px solid rgba(138,100,56,.22);
     border-radius: 50%;
-    background: rgba(244,229,210,.12);
-    color: #fff8ed;
+    background: var(--bg-sand);
+    color: var(--text-dark);
     cursor: pointer;
     transition: background-color .18s ease, color .18s ease;
 }
 
-.zoom-control:hover, .zoom-control:focus-visible { background: #f2e5d3; color: #5f422b; }
+.zoom-control:hover, .zoom-control:focus-visible { background: var(--surface-light); color: var(--text-dark); }
 
 .zoom-control:disabled { opacity: .38; cursor: not-allowed; }
 
-.zoom-level { min-width: 48px; text-align: center; color: #fff8ed; font: 600 11px/1 "Plus Jakarta Sans",sans-serif; font-variant-numeric: tabular-nums; }
+.zoom-level { min-width: 48px; text-align: center; color: var(--text-dark); font: 600 11px/1 "Plus Jakarta Sans",sans-serif; font-variant-numeric: tabular-nums; }
 
 .zoom-control svg { width: 17px; height: 17px; }
 
 .lightbox-close, .lightbox-nav {
     position: absolute;
+    z-index: 25;
     width: 44px;
     height: 44px;
     border: 1px solid rgba(138,100,56,.38);
@@ -331,6 +334,7 @@ button, a { touch-action: manipulation; }
 
 .lightbox-info {
     position: absolute;
+    z-index: 25;
     left: 50%;
     bottom: max(12px, env(safe-area-inset-bottom));
     transform: translateX(-50%);
@@ -338,10 +342,10 @@ button, a { touch-action: manipulation; }
     align-items: center;
     gap: 9px;
     padding: 8px 13px;
-    border: 1px solid rgba(255,249,238,.2);
+    border: 1px solid rgba(138,100,56,.28);
     border-radius: 999px;
-    background: rgba(42,25,14,.45);
-    color: #fff8ed;
+    background: var(--bg-sand);
+    color: var(--text-dark);
     font-size: 10px;
     font-weight: 700;
     white-space: nowrap;
@@ -459,23 +463,25 @@ button, input, select, textarea { font-family: "Plus Jakarta Sans", sans-serif; 
 .lightbox-frame { width: 100%; height: 100%; }
 
 .lightbox-close, .lightbox-nav {
+  z-index: 25;
   width: 44px; height: 44px; min-width: 44px; min-height: 44px;
-  border: 1px solid rgba(255, 249, 238, .34); border-radius: 50%;
-  background: rgba(246, 227, 197, .94); color: #674323;
+  border: 1px solid rgba(138, 100, 56, .30); border-radius: 50%;
+  background: var(--bg-sand); color: var(--text-dark);
   box-shadow: 0 7px 18px rgba(0, 0, 0, .12);
 }
 
-.lightbox-close:hover, .lightbox-nav:hover { background: #fff3e2; border-color: rgba(255, 249, 238, .54); }
+.lightbox-close:hover, .lightbox-nav:hover { background: var(--surface-light); border-color: var(--accent-dark); }
 
 .lightbox-close { top: max(7px, env(safe-area-inset-top)); right: max(7px, env(safe-area-inset-right)); }
 
 .lightbox-info {
   top: max(7px, env(safe-area-inset-top)); bottom: auto;
   left: 50%; transform: translateX(-50%);
+  z-index: 25;
   max-width: calc(100% - 132px); overflow: hidden; text-overflow: ellipsis;
   gap: 0; padding: 8px 13px;
-  border: 1px solid rgba(255, 249, 238, .34); border-radius: 999px;
-  background: rgba(246, 227, 197, .94); color: #674323;
+  border: 1px solid rgba(138, 100, 56, .28); border-radius: 999px;
+  background: var(--bg-sand); color: var(--text-dark);
   font-family: "Plus Jakarta Sans", sans-serif; font-size: 10px; font-weight: 750;
   box-shadow: 0 7px 18px rgba(0, 0, 0, .12);
 }
@@ -493,16 +499,16 @@ button, input, select, textarea { font-family: "Plus Jakarta Sans", sans-serif; 
 
 .zoom-control {
   width: 38px; height: 38px; min-width: 38px; min-height: 38px;
-  border: 0; border-radius: 50%; background: transparent; color: #f4e5d2; box-shadow: none;
+  border: 1px solid rgba(138, 100, 56, .20); border-radius: 50%; background: var(--bg-sand); color: var(--text-dark); box-shadow: none;
 }
 
-.zoom-control:hover, .zoom-control:focus-visible { background: rgba(244,229,210,.16); color: #f4e5d2; }
+.zoom-control:hover, .zoom-control:focus-visible { background: var(--surface-light); color: var(--text-dark); }
 
 .zoom-control:disabled { opacity: .42; }
 
-.zoom-level { color: #f4e5d2; }
+.zoom-level { color: var(--text-dark); }
 
-.zoom-control svg { width: 17px; height: 17px; stroke: #f4e5d2; stroke-width: 2.1; }
+.zoom-control svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 2.1; }
 
 .zoom-reset-control svg { width: 16px; height: 16px; }
 
