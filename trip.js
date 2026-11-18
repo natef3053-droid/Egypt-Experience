@@ -127,28 +127,37 @@ let translateX = 0;
 let translateY = 0;
 let pointerStart = null;
 let dragStart = null;
-let pinchStartDistance = 0;
-let pinchStartScale = 1;
 let suppressNextImageClick = false;
 let suppressClickFrame = 0;
+let galleryTransformFrame = 0;
 let galleryScrollState = null;
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
 const activePointers = new Map();
 let galleryTrigger = null;
 const galleryIsOpen = () => Boolean(lightbox?.classList.contains('active'));
+
 const resetGestureState = () => {
+  if (galleryTransformFrame) cancelAnimationFrame(galleryTransformFrame);
+  galleryTransformFrame = 0;
   translateX = 0;
   translateY = 0;
   pointerStart = null;
   dragStart = null;
   pinchStartDistance = 0;
-  pinchStartScale = 1;
+  pinchStartScale = zoomScale;
   activePointers.clear();
-  lightboxImage?.classList.remove('is-dragging', 'is-zoomed');
+  lightboxImage?.classList.remove('is-dragging', 'is-zooming', 'is-zoomed');
+  if (lightboxImage) {
+    lightboxImage.style.transform = '';
+    lightboxImage.style.cursor = '';
+  }
   lightboxContent?.classList.remove('is-zoomed');
   if (suppressClickFrame) cancelAnimationFrame(suppressClickFrame);
   suppressClickFrame = 0;
   suppressNextImageClick = false;
 };
+
 const applyGalleryTransform = () => {
   if (!lightboxImage) return;
   if (zoomScale <= 1) {
@@ -165,17 +174,47 @@ const applyGalleryTransform = () => {
   }
   lightboxImage.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${zoomScale})`;
 };
-lightboxImage?.addEventListener('load', () => { if (galleryIsOpen()) applyGalleryTransform(); });
-window.addEventListener('resize', () => { if (galleryIsOpen()) applyGalleryTransform(); }, { passive: true });
+
+const scheduleGalleryTransform = () => {
+  if (galleryTransformFrame) return;
+  galleryTransformFrame = requestAnimationFrame(() => {
+    galleryTransformFrame = 0;
+    if (galleryIsOpen()) applyGalleryTransform();
+  });
+};
+
 const setZoom = (nextScale) => {
   if (!lightboxImage) return;
   zoomScale = Math.min(4, Math.max(1, nextScale));
-  if (zoomScale === 1) { translateX = 0; translateY = 0; }
+  if (zoomScale === 1) {
+    translateX = 0;
+    translateY = 0;
+  }
   lightboxImage.classList.toggle('is-zoomed', zoomScale > 1);
   lightboxContent?.classList.toggle('is-zoomed', zoomScale > 1);
   applyGalleryTransform();
   lightboxImage.style.cursor = zoomScale > 1 ? 'grab' : 'zoom-in';
 };
+
+const setGestureZoom = (nextScale) => {
+  if (!lightboxImage) return;
+  zoomScale = Math.min(4, Math.max(1, nextScale));
+  if (zoomScale === 1) {
+    translateX = 0;
+    translateY = 0;
+  }
+  lightboxImage.classList.toggle('is-zoomed', zoomScale > 1);
+  lightboxContent?.classList.toggle('is-zoomed', zoomScale > 1);
+  scheduleGalleryTransform();
+};
+
+lightboxImage?.addEventListener('load', () => {
+  if (galleryIsOpen()) scheduleGalleryTransform();
+});
+window.addEventListener('resize', () => {
+  if (galleryIsOpen()) scheduleGalleryTransform();
+}, { passive: true });
+
 const showGalleryImage = (index) => {
   if (!galleryItems.length || !lightboxImage) return;
   activeImageIndex = (index + galleryItems.length) % galleryItems.length;
@@ -186,10 +225,12 @@ const showGalleryImage = (index) => {
   if (lightboxCount) lightboxCount.textContent = `${activeImageIndex + 1} / ${galleryItems.length}`;
   if (lightboxCaption) lightboxCaption.textContent = `Gallery photo ${activeImageIndex + 1}`;
   resetGestureState();
+  zoomScale = 1;
   setZoom(1);
   if (lightboxPrevious) lightboxPrevious.hidden = galleryItems.length < 2;
   if (lightboxNext) lightboxNext.hidden = galleryItems.length < 2;
 };
+
 const openGallery = (index, trigger) => {
   if (!lightbox || !galleryItems.length) return;
   galleryTrigger = trigger || galleryItems[index] || null;
@@ -207,6 +248,7 @@ const openGallery = (index, trigger) => {
   lightbox.setAttribute('aria-modal', 'true');
   requestAnimationFrame(() => lightboxClose?.focus({ preventScroll: true }));
 };
+
 const closeGallery = () => {
   if (!lightbox || !galleryIsOpen()) return;
   lightbox.classList.remove('active');
@@ -222,31 +264,56 @@ const closeGallery = () => {
     window.scrollTo(state.x, state.y);
   }
   resetGestureState();
+  zoomScale = 1;
   if (galleryTrigger?.isConnected) galleryTrigger.focus({ preventScroll: true });
 };
+
+const suppressGalleryClick = () => {
+  suppressNextImageClick = true;
+  if (suppressClickFrame) cancelAnimationFrame(suppressClickFrame);
+  suppressClickFrame = requestAnimationFrame(() => {
+    suppressNextImageClick = false;
+    suppressClickFrame = 0;
+  });
+};
+
 galleryItems.forEach((item, index) => {
   item.setAttribute('aria-haspopup', 'dialog');
   item.setAttribute('aria-controls', 'gallery-lightbox');
-  item.addEventListener('click', (event) => { event.preventDefault(); openGallery(index, item); });
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    openGallery(index, item);
+  });
 });
+
 lightboxClose?.addEventListener('click', closeGallery);
 lightboxPrevious?.addEventListener('click', () => showGalleryImage(activeImageIndex - 1));
 lightboxNext?.addEventListener('click', () => showGalleryImage(activeImageIndex + 1));
-zoomIn?.addEventListener('click', () => setZoom(zoomScale + .5));
-zoomOut?.addEventListener('click', () => setZoom(zoomScale - .5));
+zoomIn?.addEventListener('click', () => setZoom(zoomScale + 0.12));
+zoomOut?.addEventListener('click', () => setZoom(zoomScale - 0.12));
 zoomReset?.addEventListener('click', () => setZoom(1));
-lightbox?.addEventListener('click', (event) => { if (event.target === lightbox) closeGallery(); });
+lightbox?.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeGallery();
+});
 lightbox?.addEventListener('wheel', (event) => {
   if (!galleryIsOpen() || !event.ctrlKey) return;
   event.preventDefault();
-  setZoom(zoomScale + (event.deltaY < 0 ? .25 : -.25));
+  setZoom(zoomScale + (event.deltaY < 0 ? 0.08 : -0.08));
 }, { passive: false });
+
 lightboxImage?.addEventListener('click', (event) => {
-  if (suppressNextImageClick) { suppressNextImageClick = false; event.preventDefault(); event.stopPropagation(); return; }
-  if (!galleryIsOpen()) return;
-  setZoom(zoomScale === 1 ? 2 : 1);
-  event.stopPropagation();
+  if (suppressNextImageClick) {
+    suppressNextImageClick = false;
+    event.preventDefault();
+    event.stopPropagation();
+  }
 });
+lightboxImage?.addEventListener('dblclick', (event) => {
+  if (!galleryIsOpen()) return;
+  event.preventDefault();
+  setZoom(zoomScale > 1 ? 1 : 2);
+});
+
 lightboxImage?.addEventListener('pointerdown', (event) => {
   if (!galleryIsOpen() || event.button !== 0) return;
   activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
@@ -257,59 +324,74 @@ lightboxImage?.addEventListener('pointerdown', (event) => {
     pinchStartScale = zoomScale;
     pointerStart = null;
     dragStart = null;
+    lightboxImage.classList.add('is-zooming');
     return;
   }
-  if (zoomScale <= 1) pointerStart = { x: event.clientX, y: event.clientY, time: Date.now(), pointerId: event.pointerId };
-  else { dragStart = { x: event.clientX, y: event.clientY, tx: translateX, ty: translateY, pointerId: event.pointerId }; lightboxImage.classList.add('is-dragging'); }
+  if (zoomScale <= 1) {
+    pointerStart = { x: event.clientX, y: event.clientY, time: Date.now(), pointerId: event.pointerId };
+    return;
+  }
+  dragStart = { x: event.clientX, y: event.clientY, tx: translateX, ty: translateY, pointerId: event.pointerId };
+  lightboxImage.classList.add('is-dragging');
 });
+
 lightboxImage?.addEventListener('pointermove', (event) => {
   if (!galleryIsOpen()) return;
   if (activePointers.has(event.pointerId)) activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
   if (activePointers.size >= 2) {
     const points = Array.from(activePointers.values());
     const distance = Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y);
-    if (pinchStartDistance > 0) { setZoom(pinchStartScale * distance / pinchStartDistance); suppressNextImageClick = true; }
+    if (pinchStartDistance > 0) {
+      setGestureZoom(pinchStartScale * distance / pinchStartDistance);
+      suppressNextImageClick = true;
+    }
     return;
   }
-  if (dragStart?.pointerId === event.pointerId) {
+  if (dragStart && dragStart.pointerId === event.pointerId) {
     translateX = dragStart.tx + event.clientX - dragStart.x;
     translateY = dragStart.ty + event.clientY - dragStart.y;
-    applyGalleryTransform();
+    scheduleGalleryTransform();
   }
-});
+}, { passive: true });
+
 const endGalleryPointer = (event) => {
   const wasPinching = activePointers.size >= 2;
   if (event) activePointers.delete(event.pointerId);
   if (wasPinching && activePointers.size < 2) {
-    suppressNextImageClick = true;
-    if (suppressClickFrame) cancelAnimationFrame(suppressClickFrame);
-    suppressClickFrame = requestAnimationFrame(() => { suppressNextImageClick = false; suppressClickFrame = 0; });
+    lightboxImage?.classList.remove('is-zooming');
+    suppressGalleryClick();
   }
   if (activePointers.size < 2) pinchStartDistance = 0;
-  if (dragStart && (!event || dragStart.pointerId === event.pointerId)) { dragStart = null; lightboxImage?.classList.remove('is-dragging'); }
+  if (dragStart && (!event || dragStart.pointerId === event.pointerId)) {
+    const completedDrag = event?.type === 'pointerup' &&
+      Math.hypot(event.clientX - dragStart.x, event.clientY - dragStart.y) > 6;
+    dragStart = null;
+    lightboxImage?.classList.remove('is-dragging');
+    if (completedDrag) suppressGalleryClick();
+  }
   if (pointerStart && event && pointerStart.pointerId === event.pointerId && zoomScale === 1) {
     const dx = event.clientX - pointerStart.x;
     const dy = event.clientY - pointerStart.y;
     const elapsed = Date.now() - pointerStart.time;
     if (event.type === 'pointerup' && Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) && elapsed < 700) {
       showGalleryImage(activeImageIndex + (dx < 0 ? 1 : -1));
-      suppressNextImageClick = true;
-      if (suppressClickFrame) cancelAnimationFrame(suppressClickFrame);
-      suppressClickFrame = requestAnimationFrame(() => { suppressNextImageClick = false; suppressClickFrame = 0; });
+      suppressGalleryClick();
     }
     pointerStart = null;
   }
 };
+
 lightboxImage?.addEventListener('pointerup', endGalleryPointer);
 lightboxImage?.addEventListener('pointercancel', endGalleryPointer);
 lightboxImage?.addEventListener('lostpointercapture', endGalleryPointer);
+
 document.addEventListener('keydown', (event) => {
   if (galleryIsOpen()) {
     if (event.key === 'Escape') { event.preventDefault(); closeGallery(); }
     else if (event.key === 'ArrowRight') { event.preventDefault(); showGalleryImage(activeImageIndex + 1); }
     else if (event.key === 'ArrowLeft') { event.preventDefault(); showGalleryImage(activeImageIndex - 1); }
-    else if (event.key === '+' || event.key === '=') { event.preventDefault(); setZoom(zoomScale + .5); }
-    else if (event.key === '-') { event.preventDefault(); setZoom(zoomScale - .5); }
+    else if (event.key === '+' || event.key === '=') { event.preventDefault(); setZoom(zoomScale + 0.12); }
+    else if (event.key === '-') { event.preventDefault(); setZoom(zoomScale - 0.12); }
     return;
   }
   if (event.key === 'Escape' && drawer?.classList.contains('open')) setDrawer(false);
