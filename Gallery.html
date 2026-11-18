@@ -261,6 +261,7 @@ button, a { touch-action: manipulation; }
 .lightbox-img.is-zoomed { cursor: grab; }
 
 .lightbox-img.is-dragging { cursor: grabbing; transition: none; }
+.lightbox-img.is-zooming { transition: none; }
 
 .zoom-controls {
     position: absolute;
@@ -2141,32 +2142,32 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
 </div>
 <div aria-label="Egypt Experience photo gallery" class="gallery-grid" id="gallery-grid">
 <button aria-label="Open gallery image 1" class="gallery-item" data-index="0" type="button"><img alt="Egypt Experience gallery moment 1" decoding="async" fetchpriority="high" height="800" loading="eager" src="client 1.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 2" class="gallery-item" data-index="1" type="button"><img alt="Egypt Experience gallery moment 2" decoding="async" height="900" loading="lazy" src="client 2.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 3" class="gallery-item" data-index="2" type="button"><img alt="Egypt Experience gallery moment 3" decoding="async" height="900" loading="lazy" src="client 3.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 4" class="gallery-item" data-index="3" type="button"><img alt="Egypt Experience gallery moment 4" decoding="async" height="750" loading="lazy" src="client 4.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 5" class="gallery-item" data-index="4" type="button"><img alt="Egypt Experience gallery moment 5" decoding="async" height="750" loading="lazy" src="client 5.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 6" class="gallery-item" data-index="5" type="button"><img alt="Egypt Experience gallery moment 6" decoding="async" height="750" loading="lazy" src="client 6.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 7" class="gallery-item" data-index="6" type="button"><img alt="Egypt Experience gallery moment 7" decoding="async" height="900" loading="lazy" src="client 7.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 8" class="gallery-item" data-index="7" type="button"><img alt="Egypt Experience gallery moment 8" decoding="async" height="900" loading="lazy" src="client 8.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 9" class="gallery-item" data-index="8" type="button"><img alt="Egypt Experience gallery moment 9" decoding="async" height="750" loading="lazy" src="client 9.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 10" class="gallery-item" data-index="9" type="button"><img alt="Egypt Experience gallery moment 10" decoding="async" height="750" loading="lazy" src="client 10.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 11" class="gallery-item" data-index="10" type="button"><img alt="Egypt Experience gallery moment 11" decoding="async" height="750" loading="lazy" src="client 11.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 12" class="gallery-item" data-index="11" type="button"><img alt="Egypt Experience gallery moment 12" decoding="async" height="800" loading="lazy" src="client 12.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 13" class="gallery-item" data-index="12" type="button"><img alt="Egypt Experience gallery moment 13" decoding="async" height="750" loading="lazy" src="client 13.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 14" class="gallery-item" data-index="13" type="button"><img alt="Egypt Experience gallery moment 14" decoding="async" height="750" loading="lazy" src="client 14.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 15" class="gallery-item" data-index="14" type="button"><img alt="Egypt Experience gallery moment 15" decoding="async" height="750" loading="lazy" src="client 15.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 16" class="gallery-item" data-index="15" type="button"><img alt="Egypt Experience gallery moment 16" decoding="async" height="900" loading="lazy" src="client 16.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 17" class="gallery-item" data-index="16" type="button"><img alt="Egypt Experience gallery moment 17" decoding="async" height="900" loading="lazy" src="client 17.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 18" class="gallery-item" data-index="17" type="button"><img alt="Egypt Experience gallery moment 18" decoding="async" height="750" loading="lazy" src="client 18.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 19" class="gallery-item" data-index="18" type="button"><img alt="Egypt Experience gallery moment 19" decoding="async" height="750" loading="lazy" src="client 19.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 20" class="gallery-item" data-index="19" type="button"><img alt="Egypt Experience gallery moment 20" decoding="async" height="750" loading="lazy" src="client 20.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 21" class="gallery-item" data-index="20" type="button"><img alt="Egypt Experience gallery moment 21" decoding="async" height="750" loading="lazy" src="client 21.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 22" class="gallery-item" data-index="21" type="button"><img alt="Egypt Experience gallery moment 22" decoding="async" height="750" loading="lazy" src="client 22.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 23" class="gallery-item" data-index="22" type="button"><img alt="Egypt Experience gallery moment 23" decoding="async" height="800" loading="lazy" src="client 23.webp" width="1200"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 24" class="gallery-item" data-index="23" type="button"><img alt="Egypt Experience gallery moment 24" decoding="async" height="750" loading="lazy" src="client 24.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 25" class="gallery-item" data-index="24" type="button"><img alt="Egypt Experience gallery moment 25" decoding="async" height="900" loading="lazy" src="client 25.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 26" class="gallery-item" data-index="25" type="button"><img alt="Egypt Experience gallery moment 26" decoding="async" height="900" loading="lazy" src="client 26.webp" width="900"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
-<button aria-label="Open gallery image 27" class="gallery-item" data-index="26" type="button"><img alt="Egypt Experience gallery moment 27" decoding="async" height="750" loading="lazy" src="client 27.webp" width="1000"/><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 2" class="gallery-item" data-index="1" type="button"><img alt="Egypt Experience gallery moment 2" decoding="async" height="900" loading="eager" src="client 2.webp" width="900"/ fetchpriority="high"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 3" class="gallery-item" data-index="2" type="button"><img alt="Egypt Experience gallery moment 3" decoding="async" height="900" loading="lazy" src="client 3.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 4" class="gallery-item" data-index="3" type="button"><img alt="Egypt Experience gallery moment 4" decoding="async" height="750" loading="lazy" src="client 4.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 5" class="gallery-item" data-index="4" type="button"><img alt="Egypt Experience gallery moment 5" decoding="async" height="750" loading="lazy" src="client 5.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 6" class="gallery-item" data-index="5" type="button"><img alt="Egypt Experience gallery moment 6" decoding="async" height="750" loading="lazy" src="client 6.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 7" class="gallery-item" data-index="6" type="button"><img alt="Egypt Experience gallery moment 7" decoding="async" height="900" loading="lazy" src="client 7.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 8" class="gallery-item" data-index="7" type="button"><img alt="Egypt Experience gallery moment 8" decoding="async" height="900" loading="lazy" src="client 8.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 9" class="gallery-item" data-index="8" type="button"><img alt="Egypt Experience gallery moment 9" decoding="async" height="750" loading="lazy" src="client 9.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 10" class="gallery-item" data-index="9" type="button"><img alt="Egypt Experience gallery moment 10" decoding="async" height="750" loading="lazy" src="client 10.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 11" class="gallery-item" data-index="10" type="button"><img alt="Egypt Experience gallery moment 11" decoding="async" height="750" loading="lazy" src="client 11.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 12" class="gallery-item" data-index="11" type="button"><img alt="Egypt Experience gallery moment 12" decoding="async" height="800" loading="lazy" src="client 12.webp" width="1200"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 13" class="gallery-item" data-index="12" type="button"><img alt="Egypt Experience gallery moment 13" decoding="async" height="750" loading="lazy" src="client 13.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 14" class="gallery-item" data-index="13" type="button"><img alt="Egypt Experience gallery moment 14" decoding="async" height="750" loading="lazy" src="client 14.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 15" class="gallery-item" data-index="14" type="button"><img alt="Egypt Experience gallery moment 15" decoding="async" height="750" loading="lazy" src="client 15.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 16" class="gallery-item" data-index="15" type="button"><img alt="Egypt Experience gallery moment 16" decoding="async" height="900" loading="lazy" src="client 16.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 17" class="gallery-item" data-index="16" type="button"><img alt="Egypt Experience gallery moment 17" decoding="async" height="900" loading="lazy" src="client 17.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 18" class="gallery-item" data-index="17" type="button"><img alt="Egypt Experience gallery moment 18" decoding="async" height="750" loading="lazy" src="client 18.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 19" class="gallery-item" data-index="18" type="button"><img alt="Egypt Experience gallery moment 19" decoding="async" height="750" loading="lazy" src="client 19.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 20" class="gallery-item" data-index="19" type="button"><img alt="Egypt Experience gallery moment 20" decoding="async" height="750" loading="lazy" src="client 20.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 21" class="gallery-item" data-index="20" type="button"><img alt="Egypt Experience gallery moment 21" decoding="async" height="750" loading="lazy" src="client 21.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 22" class="gallery-item" data-index="21" type="button"><img alt="Egypt Experience gallery moment 22" decoding="async" height="750" loading="lazy" src="client 22.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 23" class="gallery-item" data-index="22" type="button"><img alt="Egypt Experience gallery moment 23" decoding="async" height="800" loading="lazy" src="client 23.webp" width="1200"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 24" class="gallery-item" data-index="23" type="button"><img alt="Egypt Experience gallery moment 24" decoding="async" height="750" loading="lazy" src="client 24.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 25" class="gallery-item" data-index="24" type="button"><img alt="Egypt Experience gallery moment 25" decoding="async" height="900" loading="lazy" src="client 25.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 26" class="gallery-item" data-index="25" type="button"><img alt="Egypt Experience gallery moment 26" decoding="async" height="900" loading="lazy" src="client 26.webp" width="900"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
+<button aria-label="Open gallery image 27" class="gallery-item" data-index="26" type="button"><img alt="Egypt Experience gallery moment 27" decoding="async" height="750" loading="lazy" src="client 27.webp" width="1000"/ fetchpriority="low"><span aria-hidden="true" class="gallery-icon"><i data-lucide="expand"></i></span></button>
 </div>
 </div>
 </section>
@@ -2364,9 +2365,14 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         preloadImage((index + direction + images.length) % images.length);
     };
     const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+    let zoomRenderFrame = 0;
     const renderZoom = () => {
-        const maxPanX = Math.max(0, lightboxImage.offsetWidth * (zoomLevel - 1) / 2);
-        const maxPanY = Math.max(0, lightboxImage.offsetHeight * (zoomLevel - 1) / 2);
+        const frame = $('.lightbox-frame');
+        const frameRect = frame?.getBoundingClientRect();
+        const frameWidth = frameRect?.width || window.innerWidth;
+        const frameHeight = frameRect?.height || window.innerHeight;
+        const maxPanX = Math.max(0, (lightboxImage.offsetWidth * zoomLevel - frameWidth) / 2);
+        const maxPanY = Math.max(0, (lightboxImage.offsetHeight * zoomLevel - frameHeight) / 2);
         panX = clamp(panX, -maxPanX, maxPanX);
         panY = clamp(panY, -maxPanY, maxPanY);
         lightboxImage.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${zoomLevel})`;
@@ -2374,6 +2380,13 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         zoomOutButton.disabled = zoomLevel <= 1.001;
         zoomInButton.disabled = zoomLevel >= 4;
         zoomResetButton.disabled = zoomLevel <= 1.001;
+    };
+    const scheduleZoomRender = () => {
+        if (zoomRenderFrame) return;
+        zoomRenderFrame = requestAnimationFrame(() => {
+            zoomRenderFrame = 0;
+            if (activeOverlay === lightbox) renderZoom();
+        });
     };
     const setZoom = (nextLevel, anchorX = 0, anchorY = 0) => {
         const previous = zoomLevel;
@@ -2388,12 +2401,23 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         }
         renderZoom();
     };
+    const setGestureZoom = nextLevel => {
+        zoomLevel = clamp(nextLevel, 1, 4);
+        if (zoomLevel === 1) {
+            panX = 0;
+            panY = 0;
+        }
+        lightboxImage.classList.toggle('is-zoomed', zoomLevel > 1.001);
+        scheduleZoomRender();
+    };
     const resetZoom = () => {
+        if (zoomRenderFrame) cancelAnimationFrame(zoomRenderFrame);
+        zoomRenderFrame = 0;
         zoomLevel = 1;
         panX = 0;
         panY = 0;
         dragPointer = null;
-        lightboxImage.classList.remove('is-dragging');
+        lightboxImage.classList.remove('is-dragging', 'is-zooming');
         renderZoom();
     };
     const zoomAtCenter = amount => setZoom(zoomLevel + amount);
@@ -2459,8 +2483,8 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         const index = Number(item.dataset.index);
         if (Number.isInteger(index)) openLightbox(index);
     }));
-    zoomInButton.addEventListener('click', () => zoomAtCenter(.5));
-    zoomOutButton.addEventListener('click', () => zoomAtCenter(-.5));
+    zoomInButton.addEventListener('click', () => zoomAtCenter(.12));
+    zoomOutButton.addEventListener('click', () => zoomAtCenter(-.12));
     zoomResetButton.addEventListener('click', resetZoom);
     lightboxImage.addEventListener('dblclick', event => {
         event.preventDefault();
@@ -2469,7 +2493,7 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
     lightbox.addEventListener('wheel', event => {
         if (activeOverlay !== lightbox || !(event.ctrlKey || event.metaKey || zoomLevel > 1)) return;
         event.preventDefault();
-        setZoom(zoomLevel + (event.deltaY < 0 ? .2 : -.2), event.clientX - window.innerWidth / 2, event.clientY - window.innerHeight / 2);
+        setZoom(zoomLevel + (event.deltaY < 0 ? .08 : -.08), event.clientX - window.innerWidth / 2, event.clientY - window.innerHeight / 2);
     }, { passive: false });
     lightboxImage.addEventListener('pointerdown', event => {
         if (event.pointerType === 'touch') {
@@ -2480,6 +2504,7 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
                 pinchStartZoom = zoomLevel;
                 dragPointer = null;
                 lightboxImage.classList.remove('is-dragging');
+                lightboxImage.classList.add('is-zooming');
                 return;
             }
         }
@@ -2498,7 +2523,7 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
             if (activePointers.size >= 2) {
                 const points = [...activePointers.values()];
                 const distance = Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y);
-                if (pinchStartDistance > 0) setZoom(pinchStartZoom * distance / pinchStartDistance);
+                if (pinchStartDistance > 0) setGestureZoom(pinchStartZoom * distance / pinchStartDistance);
                 return;
             }
         }
@@ -2510,7 +2535,10 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
     const endImageDrag = event => {
         activePointers.delete(event.pointerId);
         if (dragPointer === event.pointerId) dragPointer = null;
-        if (activePointers.size < 2) pinchStartDistance = 0;
+        if (activePointers.size < 2) {
+            pinchStartDistance = 0;
+            lightboxImage.classList.remove('is-zooming');
+        }
         lightboxImage.classList.remove('is-dragging');
     };
     lightboxImage.addEventListener('pointerup', endImageDrag);
@@ -2529,12 +2557,12 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         }
         if (activeOverlay === lightbox && (event.key === '+' || event.key === '=')) {
             event.preventDefault();
-            zoomAtCenter(.5);
+            zoomAtCenter(.12);
             return;
         }
         if (activeOverlay === lightbox && event.key === '-') {
             event.preventDefault();
-            zoomAtCenter(-.5);
+            zoomAtCenter(-.12);
             return;
         }
         if (activeOverlay === lightbox && event.key === '0') {
@@ -2554,6 +2582,9 @@ body { background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans
         }
         trapFocus(event);
     });
+    window.addEventListener('resize', () => {
+        if (activeOverlay === lightbox && zoomLevel > 1.001) renderZoom();
+    }, { passive: true });
     const updateBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 480);
     backToTop.addEventListener('click', () => window.scrollTo({
         top: 0,
