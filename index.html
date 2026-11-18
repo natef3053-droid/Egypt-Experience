@@ -894,9 +894,12 @@ main#main-content{
 .gallery-lightbox-image.is-zoomed{
   cursor: grab;
 }
+.gallery-lightbox-image.is-dragging,
+.gallery-lightbox-image.is-zooming{
+  transition: none;
+}
 .gallery-lightbox-image.is-dragging{
   cursor: grabbing;
-  transition: none;
 }
 .gallery-lightbox-close, .gallery-lightbox-control, .gallery-zoom-button{
   width: 44px;
@@ -2166,8 +2169,6 @@ button, [role="button"], a{
 }
 .gallery-lightbox-image.is-zoomed{
   will-change: transform;
-  max-width: none;
-  max-height: none;
 }
 .gallery-lightbox-close, .gallery-lightbox-control, .gallery-zoom-button{
   touch-action: manipulation;
@@ -6049,7 +6050,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€22</span>
-<img alt="Desert safari with quad bikes, beach buggies, camels, Bedouin tea, and stargazing" decoding="async" height="480" loading="lazy" src="Premium%20Safari.webp" width="640"/>
+<img alt="Desert safari with quad bikes, beach buggies, camels, Bedouin tea, and stargazing" decoding="async" height="480" loading="lazy" src="Safari.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6081,7 +6082,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€5</span>
-<img alt="Hurghada city discovery: Sheraton Road, traditional fish market, local souks, and marina" decoding="async" height="480" loading="lazy" src="Hurghada%20City.webp" width="640"/>
+<img alt="Hurghada city discovery: Sheraton Road, traditional fish market, local souks, and marina" decoding="async" height="480" loading="lazy" src="Hurghada.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6097,7 +6098,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€18</span>
-<img alt="Meet the horses, enjoy a guided ride through open landscapes, and experience the Red Sea shore" decoding="async" height="480" loading="lazy" src="Horse%20Riding.webp" width="640"/>
+<img alt="Meet the horses, enjoy a guided ride through open landscapes, and experience the Red Sea shore" decoding="async" height="480" loading="lazy" src="Horse.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6113,7 +6114,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€16</span>
-<img alt="Red Sea semi-submarine tour with above-water views and an underwater viewing cabin" decoding="async" height="480" loading="lazy" src="See%20the%20Red%20Sea.webp" width="640"/>
+<img alt="Red Sea semi-submarine tour with above-water views and an underwater viewing cabin" decoding="async" height="480" loading="lazy" src="Seascope.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6129,7 +6130,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€40</span>
-<img alt="Explore two historic monasteries, ancient churches, hermit caves, and the Red Sea mountains" decoding="async" height="480" loading="lazy" src="St.%20Anthony%20&amp;%20St.%20Paul%20Monasteries%20Tour%20.webp" width="640"/>
+<img alt="Explore two historic monasteries, ancient churches, hermit caves, and the Red Sea mountains" decoding="async" height="480" loading="lazy" src="Monasteries.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6177,7 +6178,7 @@ html {
 <article class="tour-card tour-card-no-guests">
 <div class="tour-thumb">
 <span class="price-badge">€117</span>
-<img alt="Western Desert expedition through Bahariya, the Black and White Deserts, Crystal Mountain, and a Bedouin-style camp" decoding="async" height="480" loading="lazy" src="Alabaster%20Wilderness%20.webp" width="640"/>
+<img alt="Western Desert expedition through Bahariya, the Black and White Deserts, Crystal Mountain, and a Bedouin-style camp" decoding="async" height="480" loading="lazy" src="Desert.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6193,7 +6194,7 @@ html {
 <article class="tour-card">
 <div class="tour-thumb">
 <span class="price-badge">€22</span>
-<img alt="Cruise the Red Sea by yacht with two snorkelling stops, coral gardens, and island visits" decoding="async" height="480" loading="lazy" src="Sea%20Trip%20on%20Boat%20.webp" width="640"/>
+<img alt="Cruise the Red Sea by yacht with two snorkelling stops, coral gardens, and island visits" decoding="async" height="480" loading="lazy" src="Boat.webp" width="640"/>
 </div>
 <div class="tour-body">
 <div class="tour-main">
@@ -6998,7 +6999,7 @@ html {
   function resetGestureState() {
     if (galleryTransformFrame) cancelAnimationFrame(galleryTransformFrame);
     galleryTransformFrame = 0;
-    if (lightboxImage) lightboxImage.classList.remove('is-dragging');
+    if (lightboxImage) lightboxImage.classList.remove('is-dragging', 'is-zooming');
     activePointers.clear();
     pointerStart = null;
     dragStart = null;
@@ -7015,7 +7016,7 @@ html {
     translateX = 0;
     translateY = 0;
     if (lightboxImage) {
-      lightboxImage.classList.remove('is-zoomed', 'is-dragging');
+      lightboxImage.classList.remove('is-zoomed', 'is-dragging', 'is-zooming');
       lightboxImage.style.transform = '';
       lightboxImage.style.cursor = '';
       if (clearSource) {
@@ -7065,6 +7066,18 @@ html {
     lightboxImage.style.cursor = zoomScale > 1 ? 'grab' : 'zoom-in';
   }
 
+  function setGestureZoom(nextScale) {
+    if (!lightboxImage) return;
+    zoomScale = Math.min(4, Math.max(1, nextScale));
+    if (zoomScale === 1) {
+      translateX = 0;
+      translateY = 0;
+    }
+    lightboxImage.classList.toggle('is-zoomed', zoomScale > 1);
+    if (lightboxContent) lightboxContent.classList.toggle('is-zoomed', zoomScale > 1);
+    scheduleGalleryTransform();
+  }
+
   function showGalleryImage(index) {
     if (!galleryItems.length || !lightboxImage) return;
     activeImageIndex = (index + galleryItems.length) % galleryItems.length;
@@ -7108,8 +7121,8 @@ html {
   lightboxClose?.addEventListener('click', closeGallery);
   lightboxPrevious?.addEventListener('click', () => showGalleryImage(activeImageIndex - 1));
   lightboxNext?.addEventListener('click', () => showGalleryImage(activeImageIndex + 1));
-  zoomIn?.addEventListener('click', () => setZoom(zoomScale + 0.5));
-  zoomOut?.addEventListener('click', () => setZoom(zoomScale - 0.5));
+  zoomIn?.addEventListener('click', () => setZoom(zoomScale + 0.12));
+  zoomOut?.addEventListener('click', () => setZoom(zoomScale - 0.12));
   zoomReset?.addEventListener('click', () => setZoom(1));
   lightbox?.addEventListener('click', event => {
     if (event.target === lightbox && topOverlay() === galleryEntry) closeGallery();
@@ -7117,18 +7130,19 @@ html {
   lightbox?.addEventListener('wheel', event => {
     if (topOverlay() !== galleryEntry || !event.ctrlKey) return;
     event.preventDefault();
-    setZoom(zoomScale + (event.deltaY < 0 ? 0.25 : -0.25));
+    setZoom(zoomScale + (event.deltaY < 0 ? 0.08 : -0.08));
   }, { passive: false });
   lightboxImage?.addEventListener('click', event => {
     if (suppressNextImageClick) {
       suppressNextImageClick = false;
       event.preventDefault();
       event.stopPropagation();
-      return;
     }
+  });
+  lightboxImage?.addEventListener('dblclick', event => {
     if (topOverlay() !== galleryEntry) return;
-    setZoom(zoomScale === 1 ? 2 : 1);
-    event.stopPropagation();
+    event.preventDefault();
+    setZoom(zoomScale > 1 ? 1 : 2);
   });
 
   lightboxImage?.addEventListener('pointerdown', event => {
@@ -7141,6 +7155,7 @@ html {
       pinchStartScale = zoomScale;
       pointerStart = null;
       dragStart = null;
+      lightboxImage.classList.add('is-zooming');
       return;
     }
     if (zoomScale <= 1) {
@@ -7158,7 +7173,7 @@ html {
       const points = Array.from(activePointers.values());
       const distance = Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y);
       if (pinchStartDistance > 0) {
-        setZoom(pinchStartScale * distance / pinchStartDistance);
+        setGestureZoom(pinchStartScale * distance / pinchStartDistance);
         suppressNextImageClick = true;
       }
       return;
@@ -7174,6 +7189,7 @@ html {
     const wasPinching = activePointers.size >= 2;
     if (event) activePointers.delete(event.pointerId);
     if (wasPinching && activePointers.size < 2) {
+      lightboxImage?.classList.remove('is-zooming');
       suppressGalleryClick();
     }
     if (activePointers.size < 2) pinchStartDistance = 0;
@@ -7253,9 +7269,9 @@ html {
     } else if (event.key === 'ArrowLeft' && galleryItems.length > 1) {
       event.preventDefault(); showGalleryImage(activeImageIndex - 1);
     } else if (event.key === '+' || event.key === '=') {
-      event.preventDefault(); setZoom(zoomScale + 0.5);
+      event.preventDefault(); setZoom(zoomScale + 0.12);
     } else if (event.key === '-') {
-      event.preventDefault(); setZoom(zoomScale - 0.5);
+      event.preventDefault(); setZoom(zoomScale - 0.12);
     }
   }, true);
 
